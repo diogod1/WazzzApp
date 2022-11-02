@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 50px;
+  color: white;
+}
+
+input {
+  font-family: inherit;
+  height: 30px;
+}
+
+.portal {
+  align-items: center;
+  background-color: whitesmoke;
+  width: 600px;
+  height: 500px;
+  margin: auto;
+  margin-top: 150px;
+  border: solid 2px;
+  border-color: #5ce1e6;
+}
+
+.button-portal {
+  background-color: #5ce1e6;
+}
+
+.header {
+  background-color: #5ce1e6;
+  height: 50px;
+  text-align: left;
+  padding: 15px;
+}
