@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MySql.EntityFrameworkCore;
 
 namespace Wazzaaap.Database_models
 {
@@ -11,9 +12,9 @@ namespace Wazzaaap.Database_models
     {
         DbSet<User> Users { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionsBuilder.MySql();
+            optionBuilder.UseMySQL("Server=localhost;Database=wazzaaap;Uid=root;Pwd=;");
         }
     }
 }
