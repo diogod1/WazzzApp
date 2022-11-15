@@ -1,0 +1,17 @@
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Wazzaaap.exe
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Wazzaaap.deps.json
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Wazzaaap.runtimeconfig.json
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Wazzaaap.dll
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Wazzaaap.pdb
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.AssemblyReference.cache
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Form1.resources
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.GenerateResource.cache
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.AssemblyInfoInputs.cache
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.AssemblyInfo.cs
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.CoreCompileInputs.cache
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.dll
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\refint\Wazzaaap.dll
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.pdb
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.genruntimeconfig.cache
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\ref\Wazzaaap.dll
