@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wazzaaap.Database_models
+namespace Wazzaaap.Model
 {
-    internal class User
+    internal class user
     {
         [Key]
         public int id { get; set; }
@@ -15,9 +15,9 @@ namespace Wazzaaap.Database_models
         public string username { get; set; }
         [Required]
         public string password { get; set; }
-        [Required]
         public string name { get; set; }
         public string bio { get; set; }
-        public string status { get; set; }
+        public string status { get; set; }    
+
     }
 }
