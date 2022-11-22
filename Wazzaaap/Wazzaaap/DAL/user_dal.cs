@@ -1,26 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace Wazzaaap.DAL
 {
-    class user_dal
+    public class user_dal
     {
         private MySqlConnection con = new DBconn().get_connection();
         private MySqlCommand cmd = new MySqlCommand();
 
-        private int regista_user(string nome, string password, string bio,string status )
+        public int  regista_user(string username, string password, string nome, string bio, string status)
         {
-            con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT INTO users(nome,password,bio,status) VALUES ()";
+            cmd.CommandText = "INSERT INTO users(username,password,name,bio,status) VALUES ('" + username + "','" + password + "','" + nome + "','" + bio + "','" + status + "')";
+            con.Open();
+            try
+            {
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    MessageBox.Show("Insert realizado com sucesso");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro", ex.ToString());
+            }
+            con.Close();
+
             return 0;
         }
-        
-
     }
 }

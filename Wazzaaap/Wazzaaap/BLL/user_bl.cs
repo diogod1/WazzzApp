@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Wazzaaap.DAL;
 
 namespace Wazzaaap.BLL
 {
@@ -18,6 +14,16 @@ namespace Wazzaaap.BLL
         public int login()
         {
 
+            return 0;
+        }
+
+        public int register()
+        {
+            int res = new user_dal().regista_user(username, password, name, bio, status);
+            if(res == 0)
+            {
+                return 1;
+            }
             return 0;
         }
     }

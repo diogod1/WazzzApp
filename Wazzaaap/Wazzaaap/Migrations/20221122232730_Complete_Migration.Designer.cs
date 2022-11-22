@@ -9,8 +9,8 @@ using Wazzaaap.Model;
 namespace Wazzaaap.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221116142254_Secondmigration")]
-    partial class Secondmigration
+    [Migration("20221122232730_Complete_Migration")]
+    partial class Complete_Migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

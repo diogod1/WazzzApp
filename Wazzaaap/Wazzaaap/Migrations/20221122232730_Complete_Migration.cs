@@ -4,7 +4,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace Wazzaaap.Migrations
 {
-    public partial class Secondmigration : Migration
+    public partial class Complete_Migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -55,6 +55,23 @@ namespace Wazzaaap.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "users",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    username = table.Column<string>(type: "text", nullable: false),
+                    password = table.Column<string>(type: "text", nullable: false),
+                    name = table.Column<string>(type: "text", nullable: false),
+                    bio = table.Column<string>(type: "text", nullable: false),
+                    status = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_users", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "users_chats",
                 columns: table => new
                 {
@@ -93,6 +110,9 @@ namespace Wazzaaap.Migrations
 
             migrationBuilder.DropTable(
                 name: "messages");
+
+            migrationBuilder.DropTable(
+                name: "users");
 
             migrationBuilder.DropTable(
                 name: "users_chats");
