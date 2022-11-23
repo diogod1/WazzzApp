@@ -1,4 +1,5 @@
-﻿using Wazzaaap.DAL;
+﻿using System.Security.Cryptography;
+using Wazzaaap.DAL;
 
 namespace Wazzaaap.BLL
 {
@@ -11,20 +12,42 @@ namespace Wazzaaap.BLL
         public string bio { get; set; }
         public string status { get; set; }
 
+
         public int login()
         {
-
-            return 0;
+            int res = new user_dal().login_user(username, password);
+            if (res == 1)
+            {
+                MessageBox.Show("Entrou na App");
+                return 1;
+            }
+            else
+            {
+                MessageBox.Show("Falhou o acesso");
+                return 0;
+            }
         }
 
         public int register()
         {
-            int res = new user_dal().regista_user(username, password, name, bio, status);
-            if(res == 0)
+            if (password.Length >= 8)
             {
-                return 1;
+                //encrypt password --TO-DO--!!!
+                int res = new user_dal().regista_user(username, password, name, bio, status);
+                if (res == 0)
+                {
+
+                    return 0;
+                }
+                else
+                {
+                    return 1;
+                }
             }
-            return 0;
+            else
+            {
+                return 0;
+            }
         }
     }
 }

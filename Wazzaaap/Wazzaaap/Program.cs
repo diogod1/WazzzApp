@@ -16,12 +16,13 @@ namespace Wazzaaap
             ApplicationConfiguration.Initialize();
             // Application.Run(new Login());
             user_bl teste = new user_bl();
-            teste.username = "dyo1";
-            teste.password = "password_teste";
-            teste.name = "Diogo Duarte";
-            teste.bio = "Sou de Braga";
-            teste.status = "online";
-            teste.register();
+            teste.username = "brndz1";
+            teste.password = "password_teste3";
+            teste.name = "Diogo Brandao";
+            teste.bio = "Sou da tecla";
+            teste.status = "ausente";
+            //teste.register();
+            teste.login();
         }
     }
 }
