@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Wazzaaap.BLL;
 
 namespace Wazzaaap.DAL
 {
@@ -18,14 +19,16 @@ namespace Wazzaaap.DAL
             {
                 if(rdr.GetString(0) != null)
                 {
-                    MessageBox.Show("Username já existe!",rdr.ToString());
+                    MessageBox.Show("Username já existe!", "Erro",MessageBoxButtons.OK, MessageBoxIcon.Error);
                     con.Close();
                     return 0;
                 }
             }
             con.Close();
+
+            var encrypt_password = new BLL.Encrypt().Encrypt_string(password);
             
-            cmd.CommandText = "INSERT INTO users(username,password,name,bio,status) VALUES ('" + username + "','" + password + "','" + nome + "','" + bio + "','" + status + "')";
+            cmd.CommandText = "INSERT INTO users(username,password,name,bio,status) VALUES ('" + username + "','" + encrypt_password + "','" + nome + "','" + bio + "','" + status + "')";
             con.Open();
             try
             {
@@ -54,7 +57,9 @@ namespace Wazzaaap.DAL
 
             while (rdr.Read())
             {
-                if(rdr.GetString(0) == username && rdr.GetString(1) == password)
+                var password_match = new Encrypt().passwords_match(rdr.GetString(1),password);
+                
+                if(rdr.GetString(0) == username && password_match == 1)
                 {
                     return 1;
                 }

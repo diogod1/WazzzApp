@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\diogo\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\diogo\\.nuget\\packages",
+      "C:\\Users\\diogduarte\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\diogduarte\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

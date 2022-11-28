@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YCYuodnIAwy+t9gt4qUldpueqCs7KqkfNK7mTdaev7M69FcSW2eXNNDLFpOJ9VHq/S5kMAFEFFGQdD7TDGxvZg==",
+  "dgSpecHash": "VrWsACOwhvjGz461Ncy175gjUCxIxmJhA7nabugn/iLFqHfL6YfyQ91BEgEG3oZHKH6goClF0+ZCNCamjE1Egg==",
   "success": true,
   "projectFilePath": "C:\\Users\\diogduarte\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\diogduarte\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\diogduarte\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\diogduarte\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\diogduarte\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

@@ -128,3 +128,4 @@ C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-wind
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.CopyComplete
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.genruntimeconfig.cache
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\ref\Wazzaaap.dll
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\BCrypt.Net-Next.dll
