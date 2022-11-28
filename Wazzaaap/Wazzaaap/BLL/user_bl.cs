@@ -32,8 +32,7 @@ namespace Wazzaaap.BLL
         {
             if (password.Length >= 8)
             {
-                //encrypt password --TO-DO--!!!
-                int res = new user_dal().regista_user(username, password, name, bio, status);
+                int res = new user_dal().regista_user(username, password, name);
                 if (res == 0)
                 {
 

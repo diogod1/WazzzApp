@@ -1,6 +1,6 @@
 ﻿namespace Wazzaaap.Forms
 {
-    partial class Login
+    partial class frmLogin
     {
 
         private System.ComponentModel.IContainer components = null;
@@ -27,215 +27,192 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.pnlLoginHeader = new System.Windows.Forms.Panel();
-            this.pnlLoginSide = new System.Windows.Forms.Panel();
-            this.pnlLoginMain = new System.Windows.Forms.Panel();
-            this.lblLoginHeader = new System.Windows.Forms.Label();
-            this.picBoxUserNameLogo = new System.Windows.Forms.PictureBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.pnlLoginElements = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.picBoxPassLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblCompanyName = new System.Windows.Forms.Label();
-            this.picBoxCompanyLogo = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblCreateAcc = new System.Windows.Forms.Label();
-            this.pnlLoginHeader.SuspendLayout();
-            this.pnlLoginSide.SuspendLayout();
-            this.pnlLoginMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxUserNameLogo)).BeginInit();
-            this.pnlLoginElements.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxPassLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxCompanyLogo)).BeginInit();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.picBoxIconLogin = new System.Windows.Forms.PictureBox();
+            this.picBoxUsername = new System.Windows.Forms.PictureBox();
+            this.picboxPassword = new System.Windows.Forms.PictureBox();
+            this.picBoxExitLogin = new System.Windows.Forms.PictureBox();
+            this.linkLblCreateAcc = new System.Windows.Forms.LinkLabel();
+            this.textBoxUserLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPassLogin = new System.Windows.Forms.TextBox();
+            this.checkBoxShowPassLog = new System.Windows.Forms.CheckBox();
+            this.pnlLogin = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIconLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxExitLogin)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlLoginHeader
-            // 
-            this.pnlLoginHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
-            this.pnlLoginHeader.Controls.Add(this.pictureBox1);
-            this.pnlLoginHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLoginHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlLoginHeader.Name = "pnlLoginHeader";
-            this.pnlLoginHeader.Size = new System.Drawing.Size(1092, 32);
-            this.pnlLoginHeader.TabIndex = 0;
-            // 
-            // pnlLoginSide
-            // 
-            this.pnlLoginSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(53)))), ((int)(((byte)(71)))));
-            this.pnlLoginSide.Controls.Add(this.picBoxCompanyLogo);
-            this.pnlLoginSide.Controls.Add(this.lblCompanyName);
-            this.pnlLoginSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLoginSide.Location = new System.Drawing.Point(0, 32);
-            this.pnlLoginSide.Name = "pnlLoginSide";
-            this.pnlLoginSide.Size = new System.Drawing.Size(243, 490);
-            this.pnlLoginSide.TabIndex = 1;
-            this.pnlLoginSide.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLoginSide_Paint);
-            // 
-            // pnlLoginMain
-            // 
-            this.pnlLoginMain.Controls.Add(this.lblCreateAcc);
-            this.pnlLoginMain.Controls.Add(this.btnLogin);
-            this.pnlLoginMain.Controls.Add(this.pnlLoginElements);
-            this.pnlLoginMain.Controls.Add(this.lblLoginHeader);
-            this.pnlLoginMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLoginMain.Location = new System.Drawing.Point(243, 32);
-            this.pnlLoginMain.Name = "pnlLoginMain";
-            this.pnlLoginMain.Size = new System.Drawing.Size(849, 490);
-            this.pnlLoginMain.TabIndex = 2;
-            // 
-            // lblLoginHeader
-            // 
-            this.lblLoginHeader.AutoSize = true;
-            this.lblLoginHeader.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLoginHeader.Location = new System.Drawing.Point(319, 31);
-            this.lblLoginHeader.Name = "lblLoginHeader";
-            this.lblLoginHeader.Size = new System.Drawing.Size(84, 37);
-            this.lblLoginHeader.TabIndex = 0;
-            this.lblLoginHeader.Text = "Login";
-            // 
-            // picBoxUserNameLogo
-            // 
-            this.picBoxUserNameLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxUserNameLogo.Image")));
-            this.picBoxUserNameLogo.Location = new System.Drawing.Point(16, 21);
-            this.picBoxUserNameLogo.Name = "picBoxUserNameLogo";
-            this.picBoxUserNameLogo.Size = new System.Drawing.Size(41, 38);
-            this.picBoxUserNameLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxUserNameLogo.TabIndex = 0;
-            this.picBoxUserNameLogo.TabStop = false;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.Location = new System.Drawing.Point(73, 36);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(235, 16);
-            this.txtUserName.TabIndex = 2;
-            // 
-            // pnlLoginElements
-            // 
-            this.pnlLoginElements.Controls.Add(this.txtPassword);
-            this.pnlLoginElements.Controls.Add(this.picBoxPassLogo);
-            this.pnlLoginElements.Controls.Add(this.txtUserName);
-            this.pnlLoginElements.Controls.Add(this.picBoxUserNameLogo);
-            this.pnlLoginElements.Location = new System.Drawing.Point(167, 111);
-            this.pnlLoginElements.Name = "pnlLoginElements";
-            this.pnlLoginElements.Size = new System.Drawing.Size(363, 156);
-            this.pnlLoginElements.TabIndex = 1;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Location = new System.Drawing.Point(73, 91);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(235, 16);
-            this.txtPassword.TabIndex = 4;
-            // 
-            // picBoxPassLogo
-            // 
-            this.picBoxPassLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPassLogo.Image")));
-            this.picBoxPassLogo.Location = new System.Drawing.Point(16, 76);
-            this.picBoxPassLogo.Name = "picBoxPassLogo";
-            this.picBoxPassLogo.Size = new System.Drawing.Size(41, 38);
-            this.picBoxPassLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxPassLogo.TabIndex = 3;
-            this.picBoxPassLogo.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1063, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblCompanyName
-            // 
-            this.lblCompanyName.AutoSize = true;
-            this.lblCompanyName.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblCompanyName.Location = new System.Drawing.Point(60, 57);
-            this.lblCompanyName.Name = "lblCompanyName";
-            this.lblCompanyName.Size = new System.Drawing.Size(114, 28);
-            this.lblCompanyName.TabIndex = 0;
-            this.lblCompanyName.Text = "WAZZAAPP";
-            // 
-            // picBoxCompanyLogo
-            // 
-            this.picBoxCompanyLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxCompanyLogo.Image")));
-            this.picBoxCompanyLogo.Location = new System.Drawing.Point(51, 122);
-            this.picBoxCompanyLogo.Name = "picBoxCompanyLogo";
-            this.picBoxCompanyLogo.Size = new System.Drawing.Size(134, 103);
-            this.picBoxCompanyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxCompanyLogo.TabIndex = 1;
-            this.picBoxCompanyLogo.TabStop = false;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(279, 303);
+            this.btnLogin.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(87, 301);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(150, 37);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Size = new System.Drawing.Size(118, 33);
+            this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // lblCreateAcc
+            // lblLogin
             // 
-            this.lblCreateAcc.AutoSize = true;
-            this.lblCreateAcc.Location = new System.Drawing.Point(303, 359);
-            this.lblCreateAcc.Name = "lblCreateAcc";
-            this.lblCreateAcc.Size = new System.Drawing.Size(112, 15);
-            this.lblCreateAcc.TabIndex = 3;
-            this.lblCreateAcc.Text = "Create new account";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLogin.ForeColor = System.Drawing.Color.Black;
+            this.lblLogin.Location = new System.Drawing.Point(116, 111);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(63, 25);
+            this.lblLogin.TabIndex = 1;
+            this.lblLogin.Text = "Login";
+            this.lblLogin.Click += new System.EventHandler(this.lblCreateAcc_Click);
             // 
-            // Login
+            // picBoxIconLogin
+            // 
+            this.picBoxIconLogin.Image = ((System.Drawing.Image)(resources.GetObject("picBoxIconLogin.Image")));
+            this.picBoxIconLogin.Location = new System.Drawing.Point(116, 24);
+            this.picBoxIconLogin.Name = "picBoxIconLogin";
+            this.picBoxIconLogin.Size = new System.Drawing.Size(59, 58);
+            this.picBoxIconLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxIconLogin.TabIndex = 4;
+            this.picBoxIconLogin.TabStop = false;
+            // 
+            // picBoxUsername
+            // 
+            this.picBoxUsername.Image = ((System.Drawing.Image)(resources.GetObject("picBoxUsername.Image")));
+            this.picBoxUsername.Location = new System.Drawing.Point(31, 160);
+            this.picBoxUsername.Name = "picBoxUsername";
+            this.picBoxUsername.Size = new System.Drawing.Size(32, 29);
+            this.picBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxUsername.TabIndex = 5;
+            this.picBoxUsername.TabStop = false;
+            // 
+            // picboxPassword
+            // 
+            this.picboxPassword.Image = ((System.Drawing.Image)(resources.GetObject("picboxPassword.Image")));
+            this.picboxPassword.Location = new System.Drawing.Point(31, 200);
+            this.picboxPassword.Name = "picboxPassword";
+            this.picboxPassword.Size = new System.Drawing.Size(32, 33);
+            this.picboxPassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picboxPassword.TabIndex = 6;
+            this.picboxPassword.TabStop = false;
+            // 
+            // picBoxExitLogin
+            // 
+            this.picBoxExitLogin.BackColor = System.Drawing.Color.White;
+            this.picBoxExitLogin.Image = ((System.Drawing.Image)(resources.GetObject("picBoxExitLogin.Image")));
+            this.picBoxExitLogin.Location = new System.Drawing.Point(255, 3);
+            this.picBoxExitLogin.Name = "picBoxExitLogin";
+            this.picBoxExitLogin.Size = new System.Drawing.Size(30, 26);
+            this.picBoxExitLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxExitLogin.TabIndex = 7;
+            this.picBoxExitLogin.TabStop = false;
+            this.picBoxExitLogin.Click += new System.EventHandler(this.picBoxExitLogin_Click);
+            // 
+            // linkLblCreateAcc
+            // 
+            this.linkLblCreateAcc.AutoSize = true;
+            this.linkLblCreateAcc.LinkColor = System.Drawing.Color.Black;
+            this.linkLblCreateAcc.Location = new System.Drawing.Point(101, 337);
+            this.linkLblCreateAcc.Name = "linkLblCreateAcc";
+            this.linkLblCreateAcc.Size = new System.Drawing.Size(89, 15);
+            this.linkLblCreateAcc.TabIndex = 8;
+            this.linkLblCreateAcc.TabStop = true;
+            this.linkLblCreateAcc.Text = "Create Account";
+            this.linkLblCreateAcc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLblCreateAcc_LinkClicked);
+            // 
+            // textBoxUserLogin
+            // 
+            this.textBoxUserLogin.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxUserLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUserLogin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxUserLogin.Location = new System.Drawing.Point(69, 166);
+            this.textBoxUserLogin.Name = "textBoxUserLogin";
+            this.textBoxUserLogin.Size = new System.Drawing.Size(190, 22);
+            this.textBoxUserLogin.TabIndex = 10;
+            this.textBoxUserLogin.TextChanged += new System.EventHandler(this.textBoxUserLogin_TextChanged);
+            // 
+            // textBoxPassLogin
+            // 
+            this.textBoxPassLogin.BackColor = System.Drawing.Color.LightGray;
+            this.textBoxPassLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassLogin.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPassLogin.Location = new System.Drawing.Point(69, 210);
+            this.textBoxPassLogin.Name = "textBoxPassLogin";
+            this.textBoxPassLogin.PasswordChar = '*';
+            this.textBoxPassLogin.Size = new System.Drawing.Size(190, 22);
+            this.textBoxPassLogin.TabIndex = 11;
+            // 
+            // checkBoxShowPassLog
+            // 
+            this.checkBoxShowPassLog.AutoSize = true;
+            this.checkBoxShowPassLog.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxShowPassLog.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxShowPassLog.Location = new System.Drawing.Point(152, 238);
+            this.checkBoxShowPassLog.Name = "checkBoxShowPassLog";
+            this.checkBoxShowPassLog.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxShowPassLog.TabIndex = 12;
+            this.checkBoxShowPassLog.Text = "Show Password";
+            this.checkBoxShowPassLog.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassLog.CheckedChanged += new System.EventHandler(this.checkBoxShowPass_CheckedChanged);
+            // 
+            // pnlLogin
+            // 
+            this.pnlLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLogin.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(290, 409);
+            this.pnlLogin.TabIndex = 13;
+            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
+            // 
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1092, 522);
-            this.Controls.Add(this.pnlLoginMain);
-            this.Controls.Add(this.pnlLoginSide);
-            this.Controls.Add(this.pnlLoginHeader);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(290, 409);
+            this.Controls.Add(this.checkBoxShowPassLog);
+            this.Controls.Add(this.textBoxPassLogin);
+            this.Controls.Add(this.textBoxUserLogin);
+            this.Controls.Add(this.linkLblCreateAcc);
+            this.Controls.Add(this.picBoxExitLogin);
+            this.Controls.Add(this.picboxPassword);
+            this.Controls.Add(this.picBoxUsername);
+            this.Controls.Add(this.picBoxIconLogin);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.pnlLogin);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Wazzaapp";
             this.Load += new System.EventHandler(this.Login_Load);
-            this.pnlLoginHeader.ResumeLayout(false);
-            this.pnlLoginSide.ResumeLayout(false);
-            this.pnlLoginSide.PerformLayout();
-            this.pnlLoginMain.ResumeLayout(false);
-            this.pnlLoginMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxUserNameLogo)).EndInit();
-            this.pnlLoginElements.ResumeLayout(false);
-            this.pnlLoginElements.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxPassLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxCompanyLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxIconLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxExitLogin)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Panel pnlLoginHeader;
-        private Panel pnlLoginSide;
-        private Panel pnlLoginMain;
-        private Label lblLoginHeader;
-        private PictureBox pictureBox1;
-        private PictureBox picBoxCompanyLogo;
-        private Label lblCompanyName;
-        private Label lblCreateAcc;
         private Button btnLogin;
-        private Panel pnlLoginElements;
-        private TextBox txtPassword;
-        private PictureBox picBoxPassLogo;
-        private TextBox txtUserName;
-        private PictureBox picBoxUserNameLogo;
+        private Label lblLogin;
+        private PictureBox picBoxIconLogin;
+        private PictureBox picBoxUsername;
+        private PictureBox picboxPassword;
+        private PictureBox picBoxExitLogin;
+        private LinkLabel linkLblCreateAcc;
+        private TextBox textBoxUserLogin;
+        private TextBox textBoxPassLogin;
+        private CheckBox checkBoxShowPassLog;
+        private Panel pnlLogin;
     }
 }

@@ -8,7 +8,7 @@ namespace Wazzaaap.DAL
         private MySqlConnection con = new DBconn().get_connection();
         private MySqlCommand cmd = new MySqlCommand();
 
-        public int  regista_user(string username, string password, string nome, string bio, string status)
+        public int  regista_user(string username, string password, string nome)
         {
             cmd.Connection = con;
             cmd.CommandText = "SELECT username FROM users WHERE username = '"+username+"'";
@@ -28,7 +28,7 @@ namespace Wazzaaap.DAL
 
             var encrypt_password = new BLL.Encrypt().Encrypt_string(password);
             
-            cmd.CommandText = "INSERT INTO users(username,password,name,bio,status) VALUES ('" + username + "','" + encrypt_password + "','" + nome + "','" + bio + "','" + status + "')";
+            cmd.CommandText = "INSERT INTO users(username,password,name,status,bio) VALUES ('" + username + "','" + encrypt_password + "','" + nome +"',' ',' ')";
             con.Open();
             try
             {

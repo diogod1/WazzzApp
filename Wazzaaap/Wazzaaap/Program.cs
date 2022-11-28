@@ -13,16 +13,18 @@ namespace Wazzaaap
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+
             ApplicationConfiguration.Initialize();
-            // Application.Run(new Login());
-            user_bl teste = new user_bl();
+            
+            Application.Run(new frmLogin());
+            /*user_bl teste = new user_bl();
             teste.username = "eduardo32";
             teste.password = "password_teste3";
             teste.name = "Eduardo";
             teste.bio = "Guimarães";
             teste.status = "moon";
             //teste.register();
-            teste.login();
+            teste.login();*/
         }
     }
 }
