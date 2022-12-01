@@ -17,14 +17,6 @@ namespace Wazzaaap
             ApplicationConfiguration.Initialize();
             
             Application.Run(new frmLogin());
-            /*user_bl teste = new user_bl();
-            teste.username = "eduardo32";
-            teste.password = "password_teste3";
-            teste.name = "Eduardo";
-            teste.bio = "Guimarães";
-            teste.status = "moon";
-            //teste.register();
-            teste.login();*/
         }
     }
 }

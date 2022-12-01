@@ -94,6 +94,18 @@ namespace Wazzaaap.Forms
             teste.username = textBoxUserLogin.Text;
             teste.password = textBoxPassLogin.Text;
             teste.login();
+
+            if (teste.login() == 1)
+            {
+                this.Hide();
+                frmmainWazzaapp f2 = new frmmainWazzaapp();
+                f2.Show();
+            }
+            else
+            {
+                MessageBox.Show("ERRO");
+            }
+
         }
     }
 }

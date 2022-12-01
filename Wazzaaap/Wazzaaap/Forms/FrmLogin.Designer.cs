@@ -39,10 +39,13 @@
             this.textBoxPassLogin = new System.Windows.Forms.TextBox();
             this.checkBoxShowPassLog = new System.Windows.Forms.CheckBox();
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.lblUsernameLogin = new System.Windows.Forms.Label();
+            this.lblPassLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitLogin)).BeginInit();
+            this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -161,12 +164,35 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.lblPassLogin);
+            this.pnlLogin.Controls.Add(this.lblUsernameLogin);
             this.pnlLogin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLogin.Location = new System.Drawing.Point(0, 0);
             this.pnlLogin.Name = "pnlLogin";
             this.pnlLogin.Size = new System.Drawing.Size(290, 409);
             this.pnlLogin.TabIndex = 13;
             this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
+            // 
+            // lblUsernameLogin
+            // 
+            this.lblUsernameLogin.AutoSize = true;
+            this.lblUsernameLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lblUsernameLogin.Location = new System.Drawing.Point(69, 148);
+            this.lblUsernameLogin.Name = "lblUsernameLogin";
+            this.lblUsernameLogin.Size = new System.Drawing.Size(60, 15);
+            this.lblUsernameLogin.TabIndex = 0;
+            this.lblUsernameLogin.Text = "Username";
+            // 
+            // lblPassLogin
+            // 
+            this.lblPassLogin.AutoSize = true;
+            this.lblPassLogin.BackColor = System.Drawing.Color.White;
+            this.lblPassLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPassLogin.Location = new System.Drawing.Point(69, 192);
+            this.lblPassLogin.Name = "lblPassLogin";
+            this.lblPassLogin.Size = new System.Drawing.Size(57, 15);
+            this.lblPassLogin.TabIndex = 1;
+            this.lblPassLogin.Text = "Password";
             // 
             // frmLogin
             // 
@@ -196,6 +222,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitLogin)).EndInit();
+            this.pnlLogin.ResumeLayout(false);
+            this.pnlLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +242,7 @@
         private TextBox textBoxPassLogin;
         private CheckBox checkBoxShowPassLog;
         private Panel pnlLogin;
+        private Label lblPassLogin;
+        private Label lblUsernameLogin;
     }
 }

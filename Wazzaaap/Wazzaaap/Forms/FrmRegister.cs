@@ -74,11 +74,32 @@ namespace Wazzaaap.Forms
 
         private void btnCreateAcc_Click(object sender, EventArgs e)
         {
-            user_bl teste = new user_bl();
-            teste.username = textBoxUserReg.Text;
-            teste.password = textBoxPassReg.Text;
-            teste.name = textBoxPassReg2.Text;
-            teste.register();
+            if(textBoxPassReg.Text != textBoxPassReg2.Text)
+            {
+                MessageBox.Show("Erro");
+            }
+            else
+            {
+                user_bl teste = new user_bl();
+                teste.username = textBoxUserReg.Text;
+                teste.name = textBoxNameReg.Text;
+                teste.password = textBoxPassReg.Text;
+                if(teste.register() == 2)
+                {
+                    lblPassConditionReg.ForeColor = System.Drawing.Color.Red;
+                }                
+            }
+        }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNameReg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

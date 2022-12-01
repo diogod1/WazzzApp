@@ -18,12 +18,10 @@ namespace Wazzaaap.BLL
             int res = new user_dal().login_user(username, password);
             if (res == 1)
             {
-                MessageBox.Show("Entrou na App");
                 return 1;
             }
             else
             {
-                MessageBox.Show("Falhou o acesso");
                 return 0;
             }
         }
@@ -45,7 +43,7 @@ namespace Wazzaaap.BLL
             }
             else
             {
-                return 0;
+                return 2;//Retorna 2 Falha de Password
             }
         }
     }

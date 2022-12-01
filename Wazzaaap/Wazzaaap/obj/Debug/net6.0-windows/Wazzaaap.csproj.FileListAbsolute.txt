@@ -174,3 +174,4 @@ C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\ne
 C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.pdb
 C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.genruntimeconfig.cache
 C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\ref\Wazzaaap.dll
+C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.frmmainWazzaapp.resources
