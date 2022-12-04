@@ -51,5 +51,30 @@ namespace Wazzaaap.Forms
         {
 
         }
+
+        private void lblWazzaapp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBoxSearchWazzaapp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTxtBoxWazzaapp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUser2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlMainWazzaapp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

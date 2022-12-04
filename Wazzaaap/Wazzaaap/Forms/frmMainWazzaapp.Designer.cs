@@ -33,35 +33,32 @@
             this.picBoxExitWazzaapp = new System.Windows.Forms.PictureBox();
             this.lblWazzaapp = new System.Windows.Forms.Label();
             this.picBoxIconWazzaap = new System.Windows.Forms.PictureBox();
-            this.pnlSideWazzaapp = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlUser3Wazzaapp = new System.Windows.Forms.Panel();
-            this.pnlUser4azzaapp = new System.Windows.Forms.Panel();
-            this.pnlUser2Wazzaapp = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pnlUser1Wazzaapp = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pnlBottomWazaapp = new System.Windows.Forms.Panel();
-            this.richTxtBoxWazzaapp = new System.Windows.Forms.RichTextBox();
-            this.picBoxSendMessageWazzaapp = new System.Windows.Forms.PictureBox();
+            this.pnlSearchHeaderWazzaapp = new System.Windows.Forms.Panel();
+            this.pnlSideSearchWazzaapp = new System.Windows.Forms.Panel();
+            this.pnlSearchBottomLine = new System.Windows.Forms.Panel();
+            this.txtBoxSearchWazzaapp = new System.Windows.Forms.TextBox();
+            this.picBoxSearchWazzaapp = new System.Windows.Forms.PictureBox();
+            this.pnlSideUsersWazzaapp = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnUser3 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnUser2 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnUser4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnUser1 = new System.Windows.Forms.Button();
             this.pnlMainWazzaapp = new System.Windows.Forms.Panel();
-            this.richTxtBoxMessage4 = new System.Windows.Forms.RichTextBox();
-            this.richTxtBoxMessage3 = new System.Windows.Forms.RichTextBox();
-            this.richTxtBoxMessage2 = new System.Windows.Forms.RichTextBox();
-            this.richTxtBoxMessage1 = new System.Windows.Forms.RichTextBox();
-            this.pnlUser4Wazzaapp = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlHeaderWazzaapp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).BeginInit();
-            this.pnlSideWazzaapp.SuspendLayout();
-            this.pnlUser3Wazzaapp.SuspendLayout();
-            this.pnlUser2Wazzaapp.SuspendLayout();
-            this.pnlUser1Wazzaapp.SuspendLayout();
-            this.pnlBottomWazaapp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSendMessageWazzaapp)).BeginInit();
-            this.pnlMainWazzaapp.SuspendLayout();
-            this.pnlUser4Wazzaapp.SuspendLayout();
+            this.pnlSearchHeaderWazzaapp.SuspendLayout();
+            this.pnlSideSearchWazzaapp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxSearchWazzaapp)).BeginInit();
+            this.pnlSideUsersWazzaapp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeaderWazzaapp
@@ -70,15 +67,16 @@
             this.pnlHeaderWazzaapp.Controls.Add(this.picBoxExitWazzaapp);
             this.pnlHeaderWazzaapp.Controls.Add(this.lblWazzaapp);
             this.pnlHeaderWazzaapp.Controls.Add(this.picBoxIconWazzaap);
-            this.pnlHeaderWazzaapp.Location = new System.Drawing.Point(1, 0);
+            this.pnlHeaderWazzaapp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeaderWazzaapp.Location = new System.Drawing.Point(0, 0);
             this.pnlHeaderWazzaapp.Name = "pnlHeaderWazzaapp";
-            this.pnlHeaderWazzaapp.Size = new System.Drawing.Size(1064, 49);
+            this.pnlHeaderWazzaapp.Size = new System.Drawing.Size(1169, 33);
             this.pnlHeaderWazzaapp.TabIndex = 0;
             // 
             // picBoxExitWazzaapp
             // 
             this.picBoxExitWazzaapp.Image = ((System.Drawing.Image)(resources.GetObject("picBoxExitWazzaapp.Image")));
-            this.picBoxExitWazzaapp.Location = new System.Drawing.Point(1017, 9);
+            this.picBoxExitWazzaapp.Location = new System.Drawing.Point(1132, 0);
             this.picBoxExitWazzaapp.Name = "picBoxExitWazzaapp";
             this.picBoxExitWazzaapp.Size = new System.Drawing.Size(34, 30);
             this.picBoxExitWazzaapp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -91,200 +89,188 @@
             this.lblWazzaapp.AutoSize = true;
             this.lblWazzaapp.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblWazzaapp.ForeColor = System.Drawing.Color.White;
-            this.lblWazzaapp.Location = new System.Drawing.Point(69, 9);
+            this.lblWazzaapp.Location = new System.Drawing.Point(60, 5);
             this.lblWazzaapp.Name = "lblWazzaapp";
             this.lblWazzaapp.Size = new System.Drawing.Size(102, 25);
             this.lblWazzaapp.TabIndex = 1;
             this.lblWazzaapp.Text = "Wazzaapp";
+            this.lblWazzaapp.Click += new System.EventHandler(this.lblWazzaapp_Click);
             // 
             // picBoxIconWazzaap
             // 
             this.picBoxIconWazzaap.Image = ((System.Drawing.Image)(resources.GetObject("picBoxIconWazzaap.Image")));
-            this.picBoxIconWazzaap.Location = new System.Drawing.Point(11, 3);
+            this.picBoxIconWazzaap.Location = new System.Drawing.Point(11, 2);
             this.picBoxIconWazzaap.Name = "picBoxIconWazzaap";
-            this.picBoxIconWazzaap.Size = new System.Drawing.Size(52, 42);
+            this.picBoxIconWazzaap.Size = new System.Drawing.Size(43, 28);
             this.picBoxIconWazzaap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxIconWazzaap.TabIndex = 0;
             this.picBoxIconWazzaap.TabStop = false;
             // 
-            // pnlSideWazzaapp
+            // pnlSearchHeaderWazzaapp
             // 
-            this.pnlSideWazzaapp.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlSideWazzaapp.Controls.Add(this.panel2);
-            this.pnlSideWazzaapp.Controls.Add(this.pnlUser3Wazzaapp);
-            this.pnlSideWazzaapp.Controls.Add(this.pnlUser2Wazzaapp);
-            this.pnlSideWazzaapp.Controls.Add(this.pnlUser1Wazzaapp);
-            this.pnlSideWazzaapp.Location = new System.Drawing.Point(1, 48);
-            this.pnlSideWazzaapp.Name = "pnlSideWazzaapp";
-            this.pnlSideWazzaapp.Size = new System.Drawing.Size(220, 504);
-            this.pnlSideWazzaapp.TabIndex = 1;
-            this.pnlSideWazzaapp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSideWazzaapp_Paint);
+            this.pnlSearchHeaderWazzaapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.pnlSearchHeaderWazzaapp.Controls.Add(this.pnlSideSearchWazzaapp);
+            this.pnlSearchHeaderWazzaapp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearchHeaderWazzaapp.Location = new System.Drawing.Point(0, 33);
+            this.pnlSearchHeaderWazzaapp.Name = "pnlSearchHeaderWazzaapp";
+            this.pnlSearchHeaderWazzaapp.Size = new System.Drawing.Size(1169, 43);
+            this.pnlSearchHeaderWazzaapp.TabIndex = 4;
             // 
-            // panel2
+            // pnlSideSearchWazzaapp
             // 
-            this.panel2.BackColor = System.Drawing.Color.Azure;
-            this.panel2.Location = new System.Drawing.Point(0, 204);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 50);
-            this.panel2.TabIndex = 3;
+            this.pnlSideSearchWazzaapp.Controls.Add(this.pnlSearchBottomLine);
+            this.pnlSideSearchWazzaapp.Controls.Add(this.txtBoxSearchWazzaapp);
+            this.pnlSideSearchWazzaapp.Controls.Add(this.picBoxSearchWazzaapp);
+            this.pnlSideSearchWazzaapp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSideSearchWazzaapp.Location = new System.Drawing.Point(0, 0);
+            this.pnlSideSearchWazzaapp.Name = "pnlSideSearchWazzaapp";
+            this.pnlSideSearchWazzaapp.Size = new System.Drawing.Size(307, 43);
+            this.pnlSideSearchWazzaapp.TabIndex = 5;
             // 
-            // pnlUser3Wazzaapp
+            // pnlSearchBottomLine
             // 
-            this.pnlUser3Wazzaapp.Controls.Add(this.pnlUser4azzaapp);
-            this.pnlUser3Wazzaapp.Location = new System.Drawing.Point(0, 103);
-            this.pnlUser3Wazzaapp.Name = "pnlUser3Wazzaapp";
-            this.pnlUser3Wazzaapp.Size = new System.Drawing.Size(220, 50);
-            this.pnlUser3Wazzaapp.TabIndex = 2;
+            this.pnlSearchBottomLine.BackColor = System.Drawing.Color.White;
+            this.pnlSearchBottomLine.Location = new System.Drawing.Point(12, 35);
+            this.pnlSearchBottomLine.Name = "pnlSearchBottomLine";
+            this.pnlSearchBottomLine.Size = new System.Drawing.Size(248, 5);
+            this.pnlSearchBottomLine.TabIndex = 6;
             // 
-            // pnlUser4azzaapp
+            // txtBoxSearchWazzaapp
             // 
-            this.pnlUser4azzaapp.Location = new System.Drawing.Point(1, 51);
-            this.pnlUser4azzaapp.Name = "pnlUser4azzaapp";
-            this.pnlUser4azzaapp.Size = new System.Drawing.Size(220, 50);
-            this.pnlUser4azzaapp.TabIndex = 3;
+            this.txtBoxSearchWazzaapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.txtBoxSearchWazzaapp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBoxSearchWazzaapp.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtBoxSearchWazzaapp.ForeColor = System.Drawing.Color.White;
+            this.txtBoxSearchWazzaapp.Location = new System.Drawing.Point(12, 6);
+            this.txtBoxSearchWazzaapp.Name = "txtBoxSearchWazzaapp";
+            this.txtBoxSearchWazzaapp.PlaceholderText = "Search";
+            this.txtBoxSearchWazzaapp.Size = new System.Drawing.Size(247, 26);
+            this.txtBoxSearchWazzaapp.TabIndex = 1;
+            this.txtBoxSearchWazzaapp.TextChanged += new System.EventHandler(this.txtBoxSearchWazzaapp_TextChanged);
             // 
-            // pnlUser2Wazzaapp
+            // picBoxSearchWazzaapp
             // 
-            this.pnlUser2Wazzaapp.Controls.Add(this.panel8);
-            this.pnlUser2Wazzaapp.Location = new System.Drawing.Point(2, 53);
-            this.pnlUser2Wazzaapp.Name = "pnlUser2Wazzaapp";
-            this.pnlUser2Wazzaapp.Size = new System.Drawing.Size(220, 50);
-            this.pnlUser2Wazzaapp.TabIndex = 1;
+            this.picBoxSearchWazzaapp.Image = ((System.Drawing.Image)(resources.GetObject("picBoxSearchWazzaapp.Image")));
+            this.picBoxSearchWazzaapp.Location = new System.Drawing.Point(265, 6);
+            this.picBoxSearchWazzaapp.Name = "picBoxSearchWazzaapp";
+            this.picBoxSearchWazzaapp.Size = new System.Drawing.Size(35, 28);
+            this.picBoxSearchWazzaapp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxSearchWazzaapp.TabIndex = 0;
+            this.picBoxSearchWazzaapp.TabStop = false;
             // 
-            // panel8
+            // pnlSideUsersWazzaapp
             // 
-            this.panel8.Location = new System.Drawing.Point(2, 56);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(215, 48);
-            this.panel8.TabIndex = 2;
+            this.pnlSideUsersWazzaapp.Controls.Add(this.pictureBox4);
+            this.pnlSideUsersWazzaapp.Controls.Add(this.btnUser3);
+            this.pnlSideUsersWazzaapp.Controls.Add(this.pictureBox3);
+            this.pnlSideUsersWazzaapp.Controls.Add(this.btnUser2);
+            this.pnlSideUsersWazzaapp.Controls.Add(this.pictureBox5);
+            this.pnlSideUsersWazzaapp.Controls.Add(this.btnUser4);
+            this.pnlSideUsersWazzaapp.Controls.Add(this.pictureBox1);
+            this.pnlSideUsersWazzaapp.Controls.Add(this.btnUser1);
+            this.pnlSideUsersWazzaapp.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlSideUsersWazzaapp.Location = new System.Drawing.Point(0, 76);
+            this.pnlSideUsersWazzaapp.Name = "pnlSideUsersWazzaapp";
+            this.pnlSideUsersWazzaapp.Size = new System.Drawing.Size(307, 636);
+            this.pnlSideUsersWazzaapp.TabIndex = 5;
             // 
-            // pnlUser1Wazzaapp
+            // pictureBox4
             // 
-            this.pnlUser1Wazzaapp.Controls.Add(this.panel6);
-            this.pnlUser1Wazzaapp.Location = new System.Drawing.Point(1, 2);
-            this.pnlUser1Wazzaapp.Name = "pnlUser1Wazzaapp";
-            this.pnlUser1Wazzaapp.Size = new System.Drawing.Size(220, 50);
-            this.pnlUser1Wazzaapp.TabIndex = 0;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(12, 118);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(42, 39);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
             // 
-            // panel6
+            // btnUser3
             // 
-            this.panel6.Location = new System.Drawing.Point(0, 53);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(220, 50);
-            this.panel6.TabIndex = 1;
+            this.btnUser3.Location = new System.Drawing.Point(0, 109);
+            this.btnUser3.Name = "btnUser3";
+            this.btnUser3.Size = new System.Drawing.Size(307, 58);
+            this.btnUser3.TabIndex = 6;
+            this.btnUser3.Text = "User 3";
+            this.btnUser3.UseVisualStyleBackColor = true;
             // 
-            // pnlBottomWazaapp
+            // pictureBox3
             // 
-            this.pnlBottomWazaapp.BackColor = System.Drawing.Color.SteelBlue;
-            this.pnlBottomWazaapp.Controls.Add(this.richTxtBoxWazzaapp);
-            this.pnlBottomWazaapp.Controls.Add(this.picBoxSendMessageWazzaapp);
-            this.pnlBottomWazaapp.Location = new System.Drawing.Point(219, 492);
-            this.pnlBottomWazaapp.Name = "pnlBottomWazaapp";
-            this.pnlBottomWazaapp.Size = new System.Drawing.Size(846, 60);
-            this.pnlBottomWazaapp.TabIndex = 2;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(12, 64);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(42, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
             // 
-            // richTxtBoxWazzaapp
+            // btnUser2
             // 
-            this.richTxtBoxWazzaapp.Location = new System.Drawing.Point(0, 0);
-            this.richTxtBoxWazzaapp.Name = "richTxtBoxWazzaapp";
-            this.richTxtBoxWazzaapp.Size = new System.Drawing.Size(792, 60);
-            this.richTxtBoxWazzaapp.TabIndex = 0;
-            this.richTxtBoxWazzaapp.Text = "";
+            this.btnUser2.Location = new System.Drawing.Point(0, 54);
+            this.btnUser2.Name = "btnUser2";
+            this.btnUser2.Size = new System.Drawing.Size(307, 58);
+            this.btnUser2.TabIndex = 4;
+            this.btnUser2.Text = "User 2";
+            this.btnUser2.UseVisualStyleBackColor = true;
+            this.btnUser2.Click += new System.EventHandler(this.btnUser2_Click);
             // 
-            // picBoxSendMessageWazzaapp
+            // pictureBox5
             // 
-            this.picBoxSendMessageWazzaapp.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxSendMessageWazzaapp.Image = ((System.Drawing.Image)(resources.GetObject("picBoxSendMessageWazzaapp.Image")));
-            this.picBoxSendMessageWazzaapp.Location = new System.Drawing.Point(798, 2);
-            this.picBoxSendMessageWazzaapp.Name = "picBoxSendMessageWazzaapp";
-            this.picBoxSendMessageWazzaapp.Size = new System.Drawing.Size(48, 55);
-            this.picBoxSendMessageWazzaapp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxSendMessageWazzaapp.TabIndex = 1;
-            this.picBoxSendMessageWazzaapp.TabStop = false;
-            this.picBoxSendMessageWazzaapp.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(12, 173);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(42, 39);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnUser4
+            // 
+            this.btnUser4.Location = new System.Drawing.Point(0, 163);
+            this.btnUser4.Name = "btnUser4";
+            this.btnUser4.Size = new System.Drawing.Size(307, 58);
+            this.btnUser4.TabIndex = 2;
+            this.btnUser4.Text = "User 4";
+            this.btnUser4.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnUser1
+            // 
+            this.btnUser1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser1.Location = new System.Drawing.Point(0, 0);
+            this.btnUser1.Name = "btnUser1";
+            this.btnUser1.Size = new System.Drawing.Size(307, 58);
+            this.btnUser1.TabIndex = 0;
+            this.btnUser1.Text = "User 1";
+            this.btnUser1.UseVisualStyleBackColor = true;
             // 
             // pnlMainWazzaapp
             // 
-            this.pnlMainWazzaapp.Controls.Add(this.richTxtBoxMessage4);
-            this.pnlMainWazzaapp.Controls.Add(this.richTxtBoxMessage3);
-            this.pnlMainWazzaapp.Controls.Add(this.richTxtBoxMessage2);
-            this.pnlMainWazzaapp.Controls.Add(this.richTxtBoxMessage1);
-            this.pnlMainWazzaapp.Location = new System.Drawing.Point(222, 48);
+            this.pnlMainWazzaapp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainWazzaapp.Location = new System.Drawing.Point(307, 76);
             this.pnlMainWazzaapp.Name = "pnlMainWazzaapp";
-            this.pnlMainWazzaapp.Size = new System.Drawing.Size(843, 446);
-            this.pnlMainWazzaapp.TabIndex = 3;
-            // 
-            // richTxtBoxMessage4
-            // 
-            this.richTxtBoxMessage4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.richTxtBoxMessage4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTxtBoxMessage4.Location = new System.Drawing.Point(0, 28);
-            this.richTxtBoxMessage4.Name = "richTxtBoxMessage4";
-            this.richTxtBoxMessage4.ReadOnly = true;
-            this.richTxtBoxMessage4.Size = new System.Drawing.Size(792, 60);
-            this.richTxtBoxMessage4.TabIndex = 3;
-            this.richTxtBoxMessage4.Text = "";
-            // 
-            // richTxtBoxMessage3
-            // 
-            this.richTxtBoxMessage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.richTxtBoxMessage3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTxtBoxMessage3.Location = new System.Drawing.Point(51, 130);
-            this.richTxtBoxMessage3.Name = "richTxtBoxMessage3";
-            this.richTxtBoxMessage3.ReadOnly = true;
-            this.richTxtBoxMessage3.Size = new System.Drawing.Size(792, 60);
-            this.richTxtBoxMessage3.TabIndex = 2;
-            this.richTxtBoxMessage3.Text = "";
-            // 
-            // richTxtBoxMessage2
-            // 
-            this.richTxtBoxMessage2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.richTxtBoxMessage2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTxtBoxMessage2.Location = new System.Drawing.Point(0, 239);
-            this.richTxtBoxMessage2.Name = "richTxtBoxMessage2";
-            this.richTxtBoxMessage2.ReadOnly = true;
-            this.richTxtBoxMessage2.Size = new System.Drawing.Size(792, 60);
-            this.richTxtBoxMessage2.TabIndex = 1;
-            this.richTxtBoxMessage2.Text = "";
-            // 
-            // richTxtBoxMessage1
-            // 
-            this.richTxtBoxMessage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.richTxtBoxMessage1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTxtBoxMessage1.Location = new System.Drawing.Point(51, 349);
-            this.richTxtBoxMessage1.Name = "richTxtBoxMessage1";
-            this.richTxtBoxMessage1.ReadOnly = true;
-            this.richTxtBoxMessage1.Size = new System.Drawing.Size(792, 60);
-            this.richTxtBoxMessage1.TabIndex = 0;
-            this.richTxtBoxMessage1.Text = "";
-            // 
-            // pnlUser4Wazzaapp
-            // 
-            this.pnlUser4Wazzaapp.Controls.Add(this.panel1);
-            this.pnlUser4Wazzaapp.Location = new System.Drawing.Point(1, 202);
-            this.pnlUser4Wazzaapp.Name = "pnlUser4Wazzaapp";
-            this.pnlUser4Wazzaapp.Size = new System.Drawing.Size(220, 50);
-            this.pnlUser4Wazzaapp.TabIndex = 3;
-            this.pnlUser4Wazzaapp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlUser4Wazzaapp_Paint);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(0, 47);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 50);
-            this.panel1.TabIndex = 3;
+            this.pnlMainWazzaapp.Size = new System.Drawing.Size(862, 636);
+            this.pnlMainWazzaapp.TabIndex = 6;
+            this.pnlMainWazzaapp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainWazzaapp_Paint);
             // 
             // frmmainWazzaapp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1064, 552);
-            this.Controls.Add(this.pnlUser4Wazzaapp);
+            this.ClientSize = new System.Drawing.Size(1169, 712);
             this.Controls.Add(this.pnlMainWazzaapp);
-            this.Controls.Add(this.pnlBottomWazaapp);
+            this.Controls.Add(this.pnlSideUsersWazzaapp);
+            this.Controls.Add(this.pnlSearchHeaderWazzaapp);
             this.Controls.Add(this.pnlHeaderWazzaapp);
-            this.Controls.Add(this.pnlSideWazzaapp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmmainWazzaapp";
@@ -295,14 +281,15 @@
             this.pnlHeaderWazzaapp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).EndInit();
-            this.pnlSideWazzaapp.ResumeLayout(false);
-            this.pnlUser3Wazzaapp.ResumeLayout(false);
-            this.pnlUser2Wazzaapp.ResumeLayout(false);
-            this.pnlUser1Wazzaapp.ResumeLayout(false);
-            this.pnlBottomWazaapp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSendMessageWazzaapp)).EndInit();
-            this.pnlMainWazzaapp.ResumeLayout(false);
-            this.pnlUser4Wazzaapp.ResumeLayout(false);
+            this.pnlSearchHeaderWazzaapp.ResumeLayout(false);
+            this.pnlSideSearchWazzaapp.ResumeLayout(false);
+            this.pnlSideSearchWazzaapp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxSearchWazzaapp)).EndInit();
+            this.pnlSideUsersWazzaapp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,23 +300,20 @@
         private PictureBox picBoxExitWazzaapp;
         private Label lblWazzaapp;
         private PictureBox picBoxIconWazzaap;
-        private Panel pnlSideWazzaapp;
-        private Panel pnlUser2Wazzaapp;
-        private Panel panel8;
-        private Panel pnlUser1Wazzaapp;
-        private Panel panel6;
-        private Panel pnlBottomWazaapp;
-        private PictureBox picBoxSendMessageWazzaapp;
-        private RichTextBox richTxtBoxWazzaapp;
+        private Panel pnlSearchHeaderWazzaapp;
+        private Panel pnlSideSearchWazzaapp;
+        private TextBox txtBoxSearchWazzaapp;
+        private PictureBox picBoxSearchWazzaapp;
+        private Panel pnlSearchBottomLine;
+        private Panel pnlSideUsersWazzaapp;
+        private PictureBox pictureBox4;
+        private Button btnUser3;
+        private PictureBox pictureBox3;
+        private Button btnUser2;
+        private PictureBox pictureBox5;
+        private Button btnUser4;
+        private PictureBox pictureBox1;
+        private Button btnUser1;
         private Panel pnlMainWazzaapp;
-        private Panel pnlUser3Wazzaapp;
-        private Panel pnlUser4azzaapp;
-        private Panel pnlUser4Wazzaapp;
-        private Panel panel1;
-        private Panel panel2;
-        private RichTextBox richTxtBoxMessage4;
-        private RichTextBox richTxtBoxMessage3;
-        private RichTextBox richTxtBoxMessage2;
-        private RichTextBox richTxtBoxMessage1;
     }
 }
