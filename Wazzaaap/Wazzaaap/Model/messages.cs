@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace Wazzaaap.Model
 {
-    internal class group
+    internal class messages
     {
         [Key]
         public int id { get; set; }
-        public int messageID { get; set; }
+        public int userid { get; set; }
+        public int chatid { get; set; }
+        public string content { get; set; }
+        [Timestamp]
+        public DateTime sentAt { get; set; }
     }
 }

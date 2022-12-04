@@ -11,6 +11,6 @@ namespace Wazzaaap.Model
     {
         [Key]
         public int id { get; set; }
-        public int messageID { get; set; }
+        public string name { get; set; }
     }
 }

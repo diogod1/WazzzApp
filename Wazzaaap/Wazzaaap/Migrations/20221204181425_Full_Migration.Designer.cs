@@ -9,8 +9,8 @@ using Wazzaaap.Model;
 namespace Wazzaaap.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221122232730_Complete_Migration")]
-    partial class Complete_Migration
+    [Migration("20221204181425_Full_Migration")]
+    partial class Full_Migration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,29 +25,16 @@ namespace Wazzaaap.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("messageID")
-                        .HasColumnType("int");
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("id");
 
                     b.ToTable("chats");
                 });
 
-            modelBuilder.Entity("Wazzaaap.Model.group", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("messageID")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.ToTable("groups");
-                });
-
-            modelBuilder.Entity("Wazzaaap.Model.message", b =>
+            modelBuilder.Entity("Wazzaaap.Model.messages", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -59,14 +46,6 @@ namespace Wazzaaap.Migrations
                     b.Property<string>("content")
                         .IsRequired()
                         .HasColumnType("text");
-
-                    b.Property<DateTime>("deliveredAt")
-                        .IsConcurrencyToken()
-                        .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("groupid")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("sentAt")
                         .IsConcurrencyToken()
@@ -88,7 +67,6 @@ namespace Wazzaaap.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("bio")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("name")
@@ -99,8 +77,10 @@ namespace Wazzaaap.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("photo_path")
+                        .HasColumnType("text");
+
                     b.Property<string>("status")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("username")
@@ -110,40 +90,6 @@ namespace Wazzaaap.Migrations
                     b.HasKey("id");
 
                     b.ToTable("users");
-                });
-
-            modelBuilder.Entity("Wazzaaap.Model.users_chat", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("chatID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("userID")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.ToTable("users_chats");
-                });
-
-            modelBuilder.Entity("Wazzaaap.Model.users_group", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("groupID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("userID")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.ToTable("users_groups");
                 });
 #pragma warning restore 612, 618
         }

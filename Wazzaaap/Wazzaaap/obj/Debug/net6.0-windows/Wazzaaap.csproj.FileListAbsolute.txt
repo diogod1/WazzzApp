@@ -86,7 +86,6 @@ C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Properties.Resources.resources
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.AssemblyReference.cache
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Form1.resources
-C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.Login.resources
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.FrmRegister.resources
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Properties.Resources.resources
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.GenerateResource.cache
@@ -176,3 +175,7 @@ C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\ne
 C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\ref\Wazzaaap.dll
 C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.frmmainWazzaapp.resources
 C:\Users\digas\OneDrive\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.chatBox.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.chatBox.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.frmLogin.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.frmmainWazzaapp.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\BCrypt.Net-Next.dll
