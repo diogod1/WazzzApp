@@ -28,34 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblMessage
             // 
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(504, 62);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblMessage.ForeColor = System.Drawing.Color.White;
+            this.lblMessage.Location = new System.Drawing.Point(23, 12);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(504, 62);
+            this.lblMessage.TabIndex = 0;
+            this.lblMessage.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(23, 96);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(0, 15);
+            this.lblTime.TabIndex = 1;
             // 
             // bubble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTime);
+            this.Controls.Add(this.lblMessage);
             this.Name = "bubble";
             this.Size = new System.Drawing.Size(552, 127);
             this.Load += new System.EventHandler(this.bubble_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label label1;
+        private Label lblMessage;
+        private Label lblTime;
     }
 }

@@ -17,6 +17,30 @@ namespace Wazzaaap.Forms
             InitializeComponent();
         }
 
+        public bubble(string message, string time, msgtype messagetype)
+        {
+            InitializeComponent();
+            lblMessage.Text = message;
+            lblTime.Text = time;
+
+            if(messagetype.ToString()=="In")
+            {
+                //Entrada de Mensagem
+                this.BackColor = Color.FromArgb(0, 171, 255);
+            }
+            else
+            {
+                //Saída de Mensagem
+                this.BackColor = Color.Gray;
+            }
+        }
+
+        public enum msgtype
+        {
+            In,
+            Out
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -29,7 +53,6 @@ namespace Wazzaaap.Forms
         }
 
         //Ajuste de altura do componente bubble
-
         void Setheight(Label _label)
         {
             Size maxSize = new Size(495, int.MaxValue);
@@ -38,7 +61,7 @@ namespace Wazzaaap.Forms
 
             _label.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
 
-            this.Height = label1.Height + label1.Top;
+            this.Height = lblMessage.Height + lblMessage.Top;
         }
 
     }
