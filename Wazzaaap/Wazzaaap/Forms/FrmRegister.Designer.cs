@@ -275,11 +275,13 @@
             this.picBoxMinimizeRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxMinimizeRegister.TabIndex = 19;
             this.picBoxMinimizeRegister.TabStop = false;
+            this.picBoxMinimizeRegister.Click += new System.EventHandler(this.picBoxMinimizeRegister_Click);
             // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(281, 489);
             this.Controls.Add(this.picBoxMinimizeRegister);
             this.Controls.Add(this.lblConfirmPassReg);

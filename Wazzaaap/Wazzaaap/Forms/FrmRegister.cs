@@ -101,5 +101,10 @@ namespace Wazzaaap.Forms
         {
 
         }
+
+        private void picBoxMinimizeRegister_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

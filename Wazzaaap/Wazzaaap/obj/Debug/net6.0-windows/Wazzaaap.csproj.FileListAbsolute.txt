@@ -81,7 +81,6 @@ C:\Users\digas\source\repos\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\
 C:\Users\digas\source\repos\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.pdb
 C:\Users\digas\source\repos\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.genruntimeconfig.cache
 C:\Users\digas\source\repos\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\ref\Wazzaaap.dll
-C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.Login.resources
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.FrmRegister.resources
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Properties.Resources.resources
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.AssemblyReference.cache
@@ -227,3 +226,7 @@ C:\Users\dibrandao\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-
 C:\Users\dibrandao\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.genruntimeconfig.cache
 C:\Users\dibrandao\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\ref\Wazzaaap.dll
 C:\Users\dibrandao\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.bubble.resources
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.bubble.resources
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.chatBox.resources
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.frmLogin.resources
+C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.frmmainWazzaapp.resources
