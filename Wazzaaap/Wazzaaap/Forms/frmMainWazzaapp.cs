@@ -76,5 +76,15 @@ namespace Wazzaaap.Forms
         {
 
         }
+
+        private void chatBox1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxMinimizeWazzaapp_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

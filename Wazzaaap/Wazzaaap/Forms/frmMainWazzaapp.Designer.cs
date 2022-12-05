@@ -48,6 +48,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUser1 = new System.Windows.Forms.Button();
             this.pnlMainWazzaapp = new System.Windows.Forms.Panel();
+            this.chatBox1 = new Wazzaaap.Forms.chatBox();
+            this.picBoxMinimizeWazzaapp = new System.Windows.Forms.PictureBox();
             this.pnlHeaderWazzaapp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).BeginInit();
@@ -59,11 +61,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlMainWazzaapp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeaderWazzaapp
             // 
             this.pnlHeaderWazzaapp.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlHeaderWazzaapp.Controls.Add(this.picBoxMinimizeWazzaapp);
             this.pnlHeaderWazzaapp.Controls.Add(this.picBoxExitWazzaapp);
             this.pnlHeaderWazzaapp.Controls.Add(this.lblWazzaapp);
             this.pnlHeaderWazzaapp.Controls.Add(this.picBoxIconWazzaap);
@@ -186,6 +191,7 @@
             // 
             // btnUser3
             // 
+            this.btnUser3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser3.Location = new System.Drawing.Point(0, 109);
             this.btnUser3.Name = "btnUser3";
             this.btnUser3.Size = new System.Drawing.Size(307, 58);
@@ -205,6 +211,7 @@
             // 
             // btnUser2
             // 
+            this.btnUser2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser2.Location = new System.Drawing.Point(0, 54);
             this.btnUser2.Name = "btnUser2";
             this.btnUser2.Size = new System.Drawing.Size(307, 58);
@@ -225,6 +232,7 @@
             // 
             // btnUser4
             // 
+            this.btnUser4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser4.Location = new System.Drawing.Point(0, 163);
             this.btnUser4.Name = "btnUser4";
             this.btnUser4.Size = new System.Drawing.Size(307, 58);
@@ -245,6 +253,7 @@
             // btnUser1
             // 
             this.btnUser1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser1.Location = new System.Drawing.Point(0, 0);
             this.btnUser1.Name = "btnUser1";
             this.btnUser1.Size = new System.Drawing.Size(307, 58);
@@ -254,12 +263,31 @@
             // 
             // pnlMainWazzaapp
             // 
+            this.pnlMainWazzaapp.Controls.Add(this.chatBox1);
             this.pnlMainWazzaapp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainWazzaapp.Location = new System.Drawing.Point(307, 76);
             this.pnlMainWazzaapp.Name = "pnlMainWazzaapp";
             this.pnlMainWazzaapp.Size = new System.Drawing.Size(862, 636);
             this.pnlMainWazzaapp.TabIndex = 6;
             this.pnlMainWazzaapp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainWazzaapp_Paint);
+            // 
+            // chatBox1
+            // 
+            this.chatBox1.Location = new System.Drawing.Point(0, 0);
+            this.chatBox1.Name = "chatBox1";
+            this.chatBox1.Size = new System.Drawing.Size(862, 636);
+            this.chatBox1.TabIndex = 0;
+            // 
+            // picBoxMinimizeWazzaapp
+            // 
+            this.picBoxMinimizeWazzaapp.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizeWazzaapp.Image")));
+            this.picBoxMinimizeWazzaapp.Location = new System.Drawing.Point(1094, 2);
+            this.picBoxMinimizeWazzaapp.Name = "picBoxMinimizeWazzaapp";
+            this.picBoxMinimizeWazzaapp.Size = new System.Drawing.Size(32, 31);
+            this.picBoxMinimizeWazzaapp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxMinimizeWazzaapp.TabIndex = 3;
+            this.picBoxMinimizeWazzaapp.TabStop = false;
+            this.picBoxMinimizeWazzaapp.Click += new System.EventHandler(this.picBoxMinimizeWazzaapp_Click);
             // 
             // frmmainWazzaapp
             // 
@@ -290,6 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnlMainWazzaapp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,5 +345,7 @@
         private PictureBox pictureBox1;
         private Button btnUser1;
         private Panel pnlMainWazzaapp;
+        private chatBox chatBox1;
+        private PictureBox picBoxMinimizeWazzaapp;
     }
 }

@@ -48,12 +48,14 @@
             this.lblNameReg = new System.Windows.Forms.Label();
             this.lblPassReg = new System.Windows.Forms.Label();
             this.lblConfirmPassReg = new System.Windows.Forms.Label();
+            this.picBoxMinimizeRegister = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNameReg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeRegister)).BeginInit();
             this.SuspendLayout();
             // 
             // picBoxIconReg
@@ -68,6 +70,7 @@
             // 
             // picBoxExitReg
             // 
+            this.picBoxExitReg.BackColor = System.Drawing.Color.Transparent;
             this.picBoxExitReg.Image = ((System.Drawing.Image)(resources.GetObject("picBoxExitReg.Image")));
             this.picBoxExitReg.Location = new System.Drawing.Point(242, 3);
             this.picBoxExitReg.Name = "picBoxExitReg";
@@ -261,11 +264,24 @@
             this.lblConfirmPassReg.TabIndex = 18;
             this.lblConfirmPassReg.Text = "Confirm Password";
             // 
+            // picBoxMinimizeRegister
+            // 
+            this.picBoxMinimizeRegister.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxMinimizeRegister.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizeRegister.ErrorImage")));
+            this.picBoxMinimizeRegister.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizeRegister.Image")));
+            this.picBoxMinimizeRegister.Location = new System.Drawing.Point(206, 3);
+            this.picBoxMinimizeRegister.Name = "picBoxMinimizeRegister";
+            this.picBoxMinimizeRegister.Size = new System.Drawing.Size(30, 30);
+            this.picBoxMinimizeRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxMinimizeRegister.TabIndex = 19;
+            this.picBoxMinimizeRegister.TabStop = false;
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(281, 489);
+            this.Controls.Add(this.picBoxMinimizeRegister);
             this.Controls.Add(this.lblConfirmPassReg);
             this.Controls.Add(this.lblPassReg);
             this.Controls.Add(this.lblNameReg);
@@ -295,6 +311,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNameReg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeRegister)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +338,6 @@
         private Label lblNameReg;
         private Label lblPassReg;
         private Label lblConfirmPassReg;
+        private PictureBox picBoxMinimizeRegister;
     }
 }

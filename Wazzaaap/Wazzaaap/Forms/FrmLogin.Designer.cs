@@ -39,13 +39,15 @@
             this.textBoxPassLogin = new System.Windows.Forms.TextBox();
             this.checkBoxShowPassLog = new System.Windows.Forms.CheckBox();
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.lblUsernameLogin = new System.Windows.Forms.Label();
+            this.picBoxMinimizeLogin = new System.Windows.Forms.PictureBox();
             this.lblPassLogin = new System.Windows.Forms.Label();
+            this.lblUsernameLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picboxPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitLogin)).BeginInit();
             this.pnlLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -164,6 +166,7 @@
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.picBoxMinimizeLogin);
             this.pnlLogin.Controls.Add(this.lblPassLogin);
             this.pnlLogin.Controls.Add(this.lblUsernameLogin);
             this.pnlLogin.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -173,15 +176,16 @@
             this.pnlLogin.TabIndex = 13;
             this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
             // 
-            // lblUsernameLogin
+            // picBoxMinimizeLogin
             // 
-            this.lblUsernameLogin.AutoSize = true;
-            this.lblUsernameLogin.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUsernameLogin.Location = new System.Drawing.Point(69, 148);
-            this.lblUsernameLogin.Name = "lblUsernameLogin";
-            this.lblUsernameLogin.Size = new System.Drawing.Size(60, 15);
-            this.lblUsernameLogin.TabIndex = 0;
-            this.lblUsernameLogin.Text = "Username";
+            this.picBoxMinimizeLogin.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizeLogin.Image")));
+            this.picBoxMinimizeLogin.Location = new System.Drawing.Point(221, 3);
+            this.picBoxMinimizeLogin.Name = "picBoxMinimizeLogin";
+            this.picBoxMinimizeLogin.Size = new System.Drawing.Size(28, 26);
+            this.picBoxMinimizeLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxMinimizeLogin.TabIndex = 2;
+            this.picBoxMinimizeLogin.TabStop = false;
+            this.picBoxMinimizeLogin.Click += new System.EventHandler(this.picBoxMinimizeLogin_Click);
             // 
             // lblPassLogin
             // 
@@ -193,6 +197,16 @@
             this.lblPassLogin.Size = new System.Drawing.Size(57, 15);
             this.lblPassLogin.TabIndex = 1;
             this.lblPassLogin.Text = "Password";
+            // 
+            // lblUsernameLogin
+            // 
+            this.lblUsernameLogin.AutoSize = true;
+            this.lblUsernameLogin.ForeColor = System.Drawing.Color.DimGray;
+            this.lblUsernameLogin.Location = new System.Drawing.Point(69, 148);
+            this.lblUsernameLogin.Name = "lblUsernameLogin";
+            this.lblUsernameLogin.Size = new System.Drawing.Size(60, 15);
+            this.lblUsernameLogin.TabIndex = 0;
+            this.lblUsernameLogin.Text = "Username";
             // 
             // frmLogin
             // 
@@ -224,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitLogin)).EndInit();
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +259,6 @@
         private Panel pnlLogin;
         private Label lblPassLogin;
         private Label lblUsernameLogin;
+        private PictureBox picBoxMinimizeLogin;
     }
 }
