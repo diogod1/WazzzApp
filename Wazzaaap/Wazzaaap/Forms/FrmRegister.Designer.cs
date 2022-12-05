@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.picBoxIconReg = new System.Windows.Forms.PictureBox();
-            this.picBoxExitReg = new System.Windows.Forms.PictureBox();
             this.btnCreateAcc = new System.Windows.Forms.Button();
             this.picBoxUsername = new System.Windows.Forms.PictureBox();
             this.picBoxPass = new System.Windows.Forms.PictureBox();
@@ -49,43 +48,34 @@
             this.lblPassReg = new System.Windows.Forms.Label();
             this.lblConfirmPassReg = new System.Windows.Forms.Label();
             this.picBoxMinimizeRegister = new System.Windows.Forms.PictureBox();
+            this.picBoxExitReg = new System.Windows.Forms.PictureBox();
+            this.pnlDragRegister = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconReg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxExitReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNameReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeRegister)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxExitReg)).BeginInit();
+            this.pnlDragRegister.SuspendLayout();
             this.SuspendLayout();
             // 
             // picBoxIconReg
             // 
             this.picBoxIconReg.Image = ((System.Drawing.Image)(resources.GetObject("picBoxIconReg.Image")));
-            this.picBoxIconReg.Location = new System.Drawing.Point(111, 31);
+            this.picBoxIconReg.Location = new System.Drawing.Point(156, 62);
             this.picBoxIconReg.Name = "picBoxIconReg";
             this.picBoxIconReg.Size = new System.Drawing.Size(59, 61);
             this.picBoxIconReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxIconReg.TabIndex = 0;
             this.picBoxIconReg.TabStop = false;
             // 
-            // picBoxExitReg
-            // 
-            this.picBoxExitReg.BackColor = System.Drawing.Color.Transparent;
-            this.picBoxExitReg.Image = ((System.Drawing.Image)(resources.GetObject("picBoxExitReg.Image")));
-            this.picBoxExitReg.Location = new System.Drawing.Point(242, 3);
-            this.picBoxExitReg.Name = "picBoxExitReg";
-            this.picBoxExitReg.Size = new System.Drawing.Size(34, 30);
-            this.picBoxExitReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxExitReg.TabIndex = 1;
-            this.picBoxExitReg.TabStop = false;
-            this.picBoxExitReg.Click += new System.EventHandler(this.picBoxExitReg_Click);
-            // 
             // btnCreateAcc
             // 
             this.btnCreateAcc.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCreateAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAcc.ForeColor = System.Drawing.Color.White;
-            this.btnCreateAcc.Location = new System.Drawing.Point(88, 394);
+            this.btnCreateAcc.Location = new System.Drawing.Point(128, 479);
             this.btnCreateAcc.Name = "btnCreateAcc";
             this.btnCreateAcc.Size = new System.Drawing.Size(118, 40);
             this.btnCreateAcc.TabIndex = 2;
@@ -96,7 +86,7 @@
             // picBoxUsername
             // 
             this.picBoxUsername.Image = ((System.Drawing.Image)(resources.GetObject("picBoxUsername.Image")));
-            this.picBoxUsername.Location = new System.Drawing.Point(23, 160);
+            this.picBoxUsername.Location = new System.Drawing.Point(58, 204);
             this.picBoxUsername.Name = "picBoxUsername";
             this.picBoxUsername.Size = new System.Drawing.Size(31, 23);
             this.picBoxUsername.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -106,7 +96,7 @@
             // picBoxPass
             // 
             this.picBoxPass.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPass.Image")));
-            this.picBoxPass.Location = new System.Drawing.Point(23, 253);
+            this.picBoxPass.Location = new System.Drawing.Point(58, 310);
             this.picBoxPass.Name = "picBoxPass";
             this.picBoxPass.Size = new System.Drawing.Size(31, 23);
             this.picBoxPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,7 +107,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(75, 437);
+            this.linkLabel1.Location = new System.Drawing.Point(117, 522);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(142, 15);
             this.linkLabel1.TabIndex = 5;
@@ -128,7 +118,7 @@
             // picBoxPass2
             // 
             this.picBoxPass2.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPass2.Image")));
-            this.picBoxPass2.Location = new System.Drawing.Point(23, 298);
+            this.picBoxPass2.Location = new System.Drawing.Point(58, 364);
             this.picBoxPass2.Name = "picBoxPass2";
             this.picBoxPass2.Size = new System.Drawing.Size(31, 23);
             this.picBoxPass2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,10 +129,10 @@
             // 
             this.textBoxUserReg.BackColor = System.Drawing.Color.LightGray;
             this.textBoxUserReg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxUserReg.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxUserReg.Location = new System.Drawing.Point(60, 160);
+            this.textBoxUserReg.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxUserReg.Location = new System.Drawing.Point(95, 204);
             this.textBoxUserReg.Name = "textBoxUserReg";
-            this.textBoxUserReg.Size = new System.Drawing.Size(193, 26);
+            this.textBoxUserReg.Size = new System.Drawing.Size(193, 28);
             this.textBoxUserReg.TabIndex = 7;
             this.textBoxUserReg.TextChanged += new System.EventHandler(this.textBoxUserReg_TextChanged);
             // 
@@ -150,11 +140,11 @@
             // 
             this.textBoxPassReg.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPassReg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassReg.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPassReg.Location = new System.Drawing.Point(60, 253);
+            this.textBoxPassReg.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPassReg.Location = new System.Drawing.Point(95, 310);
             this.textBoxPassReg.Name = "textBoxPassReg";
             this.textBoxPassReg.PasswordChar = '*';
-            this.textBoxPassReg.Size = new System.Drawing.Size(193, 26);
+            this.textBoxPassReg.Size = new System.Drawing.Size(193, 28);
             this.textBoxPassReg.TabIndex = 8;
             this.textBoxPassReg.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -162,11 +152,11 @@
             // 
             this.textBoxPassReg2.BackColor = System.Drawing.Color.LightGray;
             this.textBoxPassReg2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPassReg2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxPassReg2.Location = new System.Drawing.Point(60, 298);
+            this.textBoxPassReg2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxPassReg2.Location = new System.Drawing.Point(95, 364);
             this.textBoxPassReg2.Name = "textBoxPassReg2";
             this.textBoxPassReg2.PasswordChar = '*';
-            this.textBoxPassReg2.Size = new System.Drawing.Size(193, 26);
+            this.textBoxPassReg2.Size = new System.Drawing.Size(193, 28);
             this.textBoxPassReg2.TabIndex = 9;
             this.textBoxPassReg2.TextChanged += new System.EventHandler(this.textBoxPassReg2_TextChanged);
             // 
@@ -174,7 +164,7 @@
             // 
             this.checkBoxShowPassReg.AutoSize = true;
             this.checkBoxShowPassReg.ForeColor = System.Drawing.Color.Black;
-            this.checkBoxShowPassReg.Location = new System.Drawing.Point(145, 355);
+            this.checkBoxShowPassReg.Location = new System.Drawing.Point(177, 422);
             this.checkBoxShowPassReg.Name = "checkBoxShowPassReg";
             this.checkBoxShowPassReg.Size = new System.Drawing.Size(108, 19);
             this.checkBoxShowPassReg.TabIndex = 10;
@@ -186,7 +176,7 @@
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRegister.Location = new System.Drawing.Point(98, 107);
+            this.lblRegister.Location = new System.Drawing.Point(143, 137);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(83, 25);
             this.lblRegister.TabIndex = 11;
@@ -196,17 +186,17 @@
             // 
             this.textBoxNameReg.BackColor = System.Drawing.Color.LightGray;
             this.textBoxNameReg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNameReg.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxNameReg.Location = new System.Drawing.Point(60, 207);
+            this.textBoxNameReg.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNameReg.Location = new System.Drawing.Point(95, 258);
             this.textBoxNameReg.Name = "textBoxNameReg";
-            this.textBoxNameReg.Size = new System.Drawing.Size(193, 26);
+            this.textBoxNameReg.Size = new System.Drawing.Size(193, 28);
             this.textBoxNameReg.TabIndex = 12;
             // 
             // lblPassConditionReg
             // 
             this.lblPassConditionReg.AutoSize = true;
             this.lblPassConditionReg.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPassConditionReg.Location = new System.Drawing.Point(57, 327);
+            this.lblPassConditionReg.Location = new System.Drawing.Point(95, 395);
             this.lblPassConditionReg.Name = "lblPassConditionReg";
             this.lblPassConditionReg.Size = new System.Drawing.Size(196, 15);
             this.lblPassConditionReg.TabIndex = 13;
@@ -216,7 +206,7 @@
             // picBoxNameReg
             // 
             this.picBoxNameReg.Image = ((System.Drawing.Image)(resources.GetObject("picBoxNameReg.Image")));
-            this.picBoxNameReg.Location = new System.Drawing.Point(23, 207);
+            this.picBoxNameReg.Location = new System.Drawing.Point(58, 258);
             this.picBoxNameReg.Name = "picBoxNameReg";
             this.picBoxNameReg.Size = new System.Drawing.Size(31, 23);
             this.picBoxNameReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -227,7 +217,7 @@
             // 
             this.lblUsernameReg.AutoSize = true;
             this.lblUsernameReg.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUsernameReg.Location = new System.Drawing.Point(60, 142);
+            this.lblUsernameReg.Location = new System.Drawing.Point(92, 186);
             this.lblUsernameReg.Name = "lblUsernameReg";
             this.lblUsernameReg.Size = new System.Drawing.Size(60, 15);
             this.lblUsernameReg.TabIndex = 15;
@@ -237,7 +227,7 @@
             // 
             this.lblNameReg.AutoSize = true;
             this.lblNameReg.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNameReg.Location = new System.Drawing.Point(60, 189);
+            this.lblNameReg.Location = new System.Drawing.Point(92, 235);
             this.lblNameReg.Name = "lblNameReg";
             this.lblNameReg.Size = new System.Drawing.Size(39, 15);
             this.lblNameReg.TabIndex = 16;
@@ -248,7 +238,7 @@
             // 
             this.lblPassReg.AutoSize = true;
             this.lblPassReg.ForeColor = System.Drawing.Color.DimGray;
-            this.lblPassReg.Location = new System.Drawing.Point(60, 236);
+            this.lblPassReg.Location = new System.Drawing.Point(92, 292);
             this.lblPassReg.Name = "lblPassReg";
             this.lblPassReg.Size = new System.Drawing.Size(57, 15);
             this.lblPassReg.TabIndex = 17;
@@ -258,7 +248,7 @@
             // 
             this.lblConfirmPassReg.AutoSize = true;
             this.lblConfirmPassReg.ForeColor = System.Drawing.Color.DimGray;
-            this.lblConfirmPassReg.Location = new System.Drawing.Point(60, 280);
+            this.lblConfirmPassReg.Location = new System.Drawing.Point(92, 346);
             this.lblConfirmPassReg.Name = "lblConfirmPassReg";
             this.lblConfirmPassReg.Size = new System.Drawing.Size(104, 15);
             this.lblConfirmPassReg.TabIndex = 18;
@@ -266,10 +256,10 @@
             // 
             // picBoxMinimizeRegister
             // 
-            this.picBoxMinimizeRegister.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxMinimizeRegister.BackColor = System.Drawing.Color.SteelBlue;
             this.picBoxMinimizeRegister.ErrorImage = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizeRegister.ErrorImage")));
             this.picBoxMinimizeRegister.Image = ((System.Drawing.Image)(resources.GetObject("picBoxMinimizeRegister.Image")));
-            this.picBoxMinimizeRegister.Location = new System.Drawing.Point(206, 3);
+            this.picBoxMinimizeRegister.Location = new System.Drawing.Point(286, 3);
             this.picBoxMinimizeRegister.Name = "picBoxMinimizeRegister";
             this.picBoxMinimizeRegister.Size = new System.Drawing.Size(30, 30);
             this.picBoxMinimizeRegister.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -277,13 +267,38 @@
             this.picBoxMinimizeRegister.TabStop = false;
             this.picBoxMinimizeRegister.Click += new System.EventHandler(this.picBoxMinimizeRegister_Click);
             // 
+            // picBoxExitReg
+            // 
+            this.picBoxExitReg.BackColor = System.Drawing.Color.SteelBlue;
+            this.picBoxExitReg.Image = ((System.Drawing.Image)(resources.GetObject("picBoxExitReg.Image")));
+            this.picBoxExitReg.Location = new System.Drawing.Point(322, 3);
+            this.picBoxExitReg.Name = "picBoxExitReg";
+            this.picBoxExitReg.Size = new System.Drawing.Size(34, 29);
+            this.picBoxExitReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxExitReg.TabIndex = 1;
+            this.picBoxExitReg.TabStop = false;
+            this.picBoxExitReg.Click += new System.EventHandler(this.picBoxExitReg_Click);
+            // 
+            // pnlDragRegister
+            // 
+            this.pnlDragRegister.BackColor = System.Drawing.Color.SteelBlue;
+            this.pnlDragRegister.Controls.Add(this.picBoxMinimizeRegister);
+            this.pnlDragRegister.Controls.Add(this.picBoxExitReg);
+            this.pnlDragRegister.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDragRegister.Location = new System.Drawing.Point(0, 0);
+            this.pnlDragRegister.Name = "pnlDragRegister";
+            this.pnlDragRegister.Size = new System.Drawing.Size(359, 40);
+            this.pnlDragRegister.TabIndex = 20;
+            this.pnlDragRegister.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown_Event);
+            this.pnlDragRegister.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove_Event);
+            this.pnlDragRegister.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp_Event);
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(281, 489);
-            this.Controls.Add(this.picBoxMinimizeRegister);
+            this.ClientSize = new System.Drawing.Size(359, 591);
             this.Controls.Add(this.lblConfirmPassReg);
             this.Controls.Add(this.lblPassReg);
             this.Controls.Add(this.lblNameReg);
@@ -301,19 +316,20 @@
             this.Controls.Add(this.picBoxPass);
             this.Controls.Add(this.picBoxUsername);
             this.Controls.Add(this.btnCreateAcc);
-            this.Controls.Add(this.picBoxExitReg);
             this.Controls.Add(this.picBoxIconReg);
+            this.Controls.Add(this.pnlDragRegister);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegister";
             this.Text = "Wazzaapp";
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconReg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxExitReg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsername)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPass2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxNameReg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeRegister)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxExitReg)).EndInit();
+            this.pnlDragRegister.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,7 +338,6 @@
         #endregion
 
         private PictureBox picBoxIconReg;
-        private PictureBox picBoxExitReg;
         private Button btnCreateAcc;
         private PictureBox picBoxUsername;
         private PictureBox picBoxPass;
@@ -341,5 +356,7 @@
         private Label lblPassReg;
         private Label lblConfirmPassReg;
         private PictureBox picBoxMinimizeRegister;
+        private PictureBox picBoxExitReg;
+        private Panel pnlDragRegister;
     }
 }

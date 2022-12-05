@@ -9,16 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Wazzaaap.BLL;
 
+
 namespace Wazzaaap.Forms
 {
     public partial class frmLogin : Form
     {
+        bool mouseDown;
+        private Point offset;
 
         public frmLogin()
         {
             InitializeComponent();
         }
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -91,7 +93,7 @@ namespace Wazzaaap.Forms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             user_bl teste = new user_bl();
-            teste.username = textBoxUserLogin.Text;
+            teste.username = txtBoxUserLogin.Text;
             teste.password = textBoxPassLogin.Text;
             teste.login();
 
@@ -111,6 +113,37 @@ namespace Wazzaaap.Forms
         private void picBoxMinimizeLogin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pnlDragLogin_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void mouseDown_Event(object sender, MouseEventArgs e)
+        {
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouseDown = true;
+        }
+
+        private void mouseMove_Event(object sender, MouseEventArgs e)
+        {
+            if(mouseDown == true)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+            }
+        }
+
+        private void mouseUp_Event(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void lblUsernameLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,9 @@ namespace Wazzaaap.Forms
 {
     public partial class frmRegister : Form
     {
+        bool mouseDown;
+        private Point offset;
+
         public frmRegister()
         {
             InitializeComponent();
@@ -105,6 +108,27 @@ namespace Wazzaaap.Forms
         private void picBoxMinimizeRegister_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void mouseDown_Event(object sender, MouseEventArgs e)
+        {
+            offset.X = e.X;
+            offset.Y = e.Y;
+            mouseDown = true;
+        }
+
+        private void mouseUp_Event(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        private void mouseMove_Event(object sender, MouseEventArgs e)
+        {
+            if (mouseDown == true)
+            {
+                Point currentScreenPos = PointToScreen(e.Location);
+                Location = new Point(currentScreenPos.X - offset.X, currentScreenPos.Y - offset.Y);
+            }
         }
     }
 }
