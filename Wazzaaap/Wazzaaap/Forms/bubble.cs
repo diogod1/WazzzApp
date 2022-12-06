@@ -33,12 +33,20 @@ namespace Wazzaaap.Forms
                 //Saída de Mensagem
                 this.BackColor = Color.Gray;
             }
+
+            Setheight();
         }
 
-        public enum msgtype
+        //Ajuste de altura
+        void Setheight()
         {
-            In,
-            Out
+            Size maxSize = new Size(495, int.MaxValue);
+            Graphics g = CreateGraphics();
+            SizeF size = g.MeasureString(lblMessage.Text, lblMessage.Font, lblMessage.Width);
+
+            lblMessage.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
+            lblTime.Top = lblMessage.Bottom +10;
+            this.Height = lblTime.Height + 10;
         }
 
 
@@ -52,17 +60,15 @@ namespace Wazzaaap.Forms
 
         }
 
-        //Ajuste de altura do componente bubble
-        void Setheight(Label _label)
+        private void lblMessage_Resize(object sender, EventArgs e)
         {
-            Size maxSize = new Size(495, int.MaxValue);
-            Graphics g = CreateGraphics();
-            SizeF size = g.MeasureString(_label.Text, _label.Font, _label.Width);
-
-            _label.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
-
-            this.Height = lblMessage.Height + lblMessage.Top;
+            Setheight();
         }
+    }
 
+    public enum msgtype
+    {
+        In,
+        Out
     }
 }

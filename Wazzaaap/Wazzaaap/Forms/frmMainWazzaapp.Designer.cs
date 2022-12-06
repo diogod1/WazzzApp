@@ -77,6 +77,7 @@
             this.pnlHeaderWazzaapp.Name = "pnlHeaderWazzaapp";
             this.pnlHeaderWazzaapp.Size = new System.Drawing.Size(1169, 33);
             this.pnlHeaderWazzaapp.TabIndex = 0;
+            this.pnlHeaderWazzaapp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlHeaderWazzaapp_Paint);
             this.pnlHeaderWazzaapp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown_Event);
             this.pnlHeaderWazzaapp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove_Event);
             this.pnlHeaderWazzaapp.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp_Event);

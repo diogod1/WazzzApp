@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dibrandao\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj": {}
+    "C:\\Users\\diogduarte\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dibrandao\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj": {
+    "C:\\Users\\diogduarte\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dibrandao\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj",
+        "projectUniqueName": "C:\\Users\\diogduarte\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj",
         "projectName": "Wazzaaap",
-        "projectPath": "C:\\Users\\dibrandao\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj",
-        "packagesPath": "C:\\Users\\dibrandao\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dibrandao\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\obj\\",
+        "projectPath": "C:\\Users\\diogduarte\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\Wazzaaap.csproj",
+        "packagesPath": "C:\\Users\\diogduarte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diogduarte\\Documents\\GitHub\\WazzzApp\\Wazzaaap\\Wazzaaap\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dibrandao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diogduarte\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -61,6 +61,10 @@
             "MySql.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.13, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
             }
           },
           "imports": [
@@ -69,7 +73,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,7 +86,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -35,11 +35,12 @@
             // lblMessage
             // 
             this.lblMessage.ForeColor = System.Drawing.Color.White;
-            this.lblMessage.Location = new System.Drawing.Point(23, 12);
+            this.lblMessage.Location = new System.Drawing.Point(15, 12);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(504, 62);
+            this.lblMessage.Size = new System.Drawing.Size(522, 99);
             this.lblMessage.TabIndex = 0;
             this.lblMessage.Click += new System.EventHandler(this.label1_Click);
+            this.lblMessage.Resize += new System.EventHandler(this.lblMessage_Resize);
             // 
             // lblTime
             // 

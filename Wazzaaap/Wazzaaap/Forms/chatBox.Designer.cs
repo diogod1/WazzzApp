@@ -31,51 +31,99 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(chatBox));
             this.panel1 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.PicBoxLine = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PicBottom = new System.Windows.Forms.PictureBox();
+            this.bubble1 = new Wazzaaap.Forms.bubble();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBottom)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
             this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.PicBoxLine);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 550);
+            this.panel1.Location = new System.Drawing.Point(0, 556);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 86);
+            this.panel1.Size = new System.Drawing.Size(862, 80);
             this.panel1.TabIndex = 0;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox1.AccessibleDescription = "";
+            this.richTextBox1.AccessibleName = "";
+            this.richTextBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.richTextBox1.Font = new System.Drawing.Font("Dubai Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.richTextBox1.Location = new System.Drawing.Point(39, 25);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(760, 86);
+            this.richTextBox1.Size = new System.Drawing.Size(698, 35);
             this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Tag = "";
             this.richTextBox1.Text = "";
+            // 
+            // PicBoxLine
+            // 
+            this.PicBoxLine.BackColor = System.Drawing.Color.Transparent;
+            this.PicBoxLine.Image = ((System.Drawing.Image)(resources.GetObject("PicBoxLine.Image")));
+            this.PicBoxLine.Location = new System.Drawing.Point(27, 45);
+            this.PicBoxLine.Name = "PicBoxLine";
+            this.PicBoxLine.Size = new System.Drawing.Size(726, 51);
+            this.PicBoxLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBoxLine.TabIndex = 3;
+            this.PicBoxLine.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(759, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(781, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(58, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.PicBottom);
+            this.panel2.Controls.Add(this.bubble1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(862, 550);
+            this.panel2.Size = new System.Drawing.Size(862, 556);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // PicBottom
+            // 
+            this.PicBottom.BackColor = System.Drawing.Color.Transparent;
+            this.PicBottom.Location = new System.Drawing.Point(27, 155);
+            this.PicBottom.Name = "PicBottom";
+            this.PicBottom.Size = new System.Drawing.Size(142, 53);
+            this.PicBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PicBottom.TabIndex = 4;
+            this.PicBottom.TabStop = false;
+            // 
+            // bubble1
+            // 
+            this.bubble1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bubble1.BackColor = System.Drawing.Color.SteelBlue;
+            this.bubble1.Location = new System.Drawing.Point(27, 20);
+            this.bubble1.Name = "bubble1";
+            this.bubble1.Size = new System.Drawing.Size(532, 106);
+            this.bubble1.TabIndex = 0;
             // 
             // chatBox
             // 
@@ -86,7 +134,10 @@
             this.Name = "chatBox";
             this.Size = new System.Drawing.Size(862, 636);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PicBottom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -97,5 +148,8 @@
         private PictureBox pictureBox1;
         private Panel panel2;
         private RichTextBox richTextBox1;
+        private bubble bubble1;
+        private PictureBox PicBoxLine;
+        private PictureBox PicBottom;
     }
 }
