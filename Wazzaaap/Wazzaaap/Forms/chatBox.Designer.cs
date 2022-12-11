@@ -30,14 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(chatBox));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlChatBottomLine = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.PicBoxLine = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PicBottom = new System.Windows.Forms.PictureBox();
             this.bubble1 = new Wazzaaap.Forms.bubble();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBottom)).BeginInit();
@@ -46,14 +45,22 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.pnlChatBottomLine);
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.PicBoxLine);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 556);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(862, 80);
             this.panel1.TabIndex = 0;
+            // 
+            // pnlChatBottomLine
+            // 
+            this.pnlChatBottomLine.BackColor = System.Drawing.Color.White;
+            this.pnlChatBottomLine.Location = new System.Drawing.Point(38, 63);
+            this.pnlChatBottomLine.Name = "pnlChatBottomLine";
+            this.pnlChatBottomLine.Size = new System.Drawing.Size(700, 5);
+            this.pnlChatBottomLine.TabIndex = 7;
             // 
             // richTextBox1
             // 
@@ -64,23 +71,12 @@
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.richTextBox1.Font = new System.Drawing.Font("Dubai Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBox1.Location = new System.Drawing.Point(39, 25);
+            this.richTextBox1.Location = new System.Drawing.Point(38, 25);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(698, 35);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Tag = "";
             this.richTextBox1.Text = "";
-            // 
-            // PicBoxLine
-            // 
-            this.PicBoxLine.BackColor = System.Drawing.Color.Transparent;
-            this.PicBoxLine.Image = ((System.Drawing.Image)(resources.GetObject("PicBoxLine.Image")));
-            this.PicBoxLine.Location = new System.Drawing.Point(27, 45);
-            this.PicBoxLine.Name = "PicBoxLine";
-            this.PicBoxLine.Size = new System.Drawing.Size(726, 51);
-            this.PicBoxLine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxLine.TabIndex = 3;
-            this.PicBoxLine.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -97,6 +93,7 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.Controls.Add(this.PicBottom);
             this.panel2.Controls.Add(this.bubble1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -134,7 +131,6 @@
             this.Name = "chatBox";
             this.Size = new System.Drawing.Size(862, 636);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicBottom)).EndInit();
@@ -149,7 +145,7 @@
         private Panel panel2;
         private RichTextBox richTextBox1;
         private bubble bubble1;
-        private PictureBox PicBoxLine;
         private PictureBox PicBottom;
+        private Panel pnlChatBottomLine;
     }
 }

@@ -20,46 +20,17 @@ namespace Wazzaaap.Forms
     {
         bool mouseDown;
         private Point offset;
+        int chatid;
 
         public frmmainWazzaapp()
         {
             InitializeComponent();
             
         }
-
-        private void frmmainWazzaapp_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmmainWazzaapp_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void pnlSideWazzaapp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlUser4Wazzaapp_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void lblWazzaapp_Click(object sender, EventArgs e)
@@ -72,22 +43,16 @@ namespace Wazzaaap.Forms
 
         }
 
-        private void richTxtBoxWazzaapp_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUser2_Click(object sender, EventArgs e)
         {
-
+            //chat general
+            chatid = 2;
+            chatBox1.ResetForm();
+            chatBox1.GetHist(chatid);
+            chatBox1.Refresh();
         }
 
         private void pnlMainWazzaapp_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void chatBox1_Load(object sender, EventArgs e)
         {
 
         }
@@ -119,6 +84,19 @@ namespace Wazzaaap.Forms
         }
 
         private void pnlHeaderWazzaapp_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnUser1_Click(object sender, EventArgs e)
+        {
+            //chat general2
+            chatid = 1;
+            chatBox1.GetHist(chatid);
+            chatBox1.Refresh();
+        }
+
+        private void btnUser4_Click(object sender, EventArgs e)
         {
 
         }

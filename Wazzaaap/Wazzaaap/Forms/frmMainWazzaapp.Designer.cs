@@ -197,7 +197,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(12, 118);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 115);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(42, 39);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,7 +207,7 @@
             // btnUser3
             // 
             this.btnUser3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser3.Location = new System.Drawing.Point(0, 109);
+            this.btnUser3.Location = new System.Drawing.Point(0, 106);
             this.btnUser3.Name = "btnUser3";
             this.btnUser3.Size = new System.Drawing.Size(307, 58);
             this.btnUser3.TabIndex = 6;
@@ -217,7 +217,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 64);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 61);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 39);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -227,20 +227,21 @@
             // btnUser2
             // 
             this.btnUser2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser2.Location = new System.Drawing.Point(0, 54);
+            this.btnUser2.Font = new System.Drawing.Font("Dubai Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUser2.Location = new System.Drawing.Point(0, 51);
             this.btnUser2.Name = "btnUser2";
             this.btnUser2.Size = new System.Drawing.Size(307, 58);
             this.btnUser2.TabIndex = 4;
-            this.btnUser2.Text = "User 2";
+            this.btnUser2.Text = "General2";
             this.btnUser2.UseVisualStyleBackColor = true;
             this.btnUser2.Click += new System.EventHandler(this.btnUser2_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 173);
+            this.pictureBox5.Location = new System.Drawing.Point(11, 170);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(42, 39);
+            this.pictureBox5.Size = new System.Drawing.Size(39, 39);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
@@ -248,17 +249,18 @@
             // btnUser4
             // 
             this.btnUser4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser4.Location = new System.Drawing.Point(0, 163);
+            this.btnUser4.Location = new System.Drawing.Point(0, 161);
             this.btnUser4.Name = "btnUser4";
             this.btnUser4.Size = new System.Drawing.Size(307, 58);
             this.btnUser4.TabIndex = 2;
             this.btnUser4.Text = "User 4";
             this.btnUser4.UseVisualStyleBackColor = true;
+            this.btnUser4.Click += new System.EventHandler(this.btnUser4_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -267,14 +269,17 @@
             // 
             // btnUser1
             // 
+            this.btnUser1.BackColor = System.Drawing.Color.Transparent;
             this.btnUser1.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnUser1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser1.Font = new System.Drawing.Font("Dubai Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUser1.Location = new System.Drawing.Point(0, 0);
             this.btnUser1.Name = "btnUser1";
             this.btnUser1.Size = new System.Drawing.Size(307, 58);
             this.btnUser1.TabIndex = 0;
-            this.btnUser1.Text = "User 1";
-            this.btnUser1.UseVisualStyleBackColor = true;
+            this.btnUser1.Text = "General";
+            this.btnUser1.UseVisualStyleBackColor = false;
+            this.btnUser1.Click += new System.EventHandler(this.btnUser1_Click);
             // 
             // pnlMainWazzaapp
             // 
@@ -308,7 +313,6 @@
             this.Name = "frmmainWazzaapp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainWazzaapp";
-            this.Load += new System.EventHandler(this.frmmainWazzaapp_Load_1);
             this.pnlHeaderWazzaapp.ResumeLayout(false);
             this.pnlHeaderWazzaapp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).EndInit();

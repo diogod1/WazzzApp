@@ -3,17 +3,17 @@ using Wazzaaap.DAL;
 
 namespace Wazzaaap.BLL
 {
-    internal class user_bl
+    public static class user_bl
     {
-        public int id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public string name { get; set; }
-        public string bio { get; set; }
-        public string status { get; set; }
+        public static int id;
+        public static string username;
+        public static string password;
+        public static string name;
+        public static string  bio;
+        public static string  status;
 
 
-        public int login()
+        public static int login()
         {
             int res = new user_dal().login_user(username, password);
             if (res == 1)
@@ -26,7 +26,7 @@ namespace Wazzaaap.BLL
             }
         }
 
-        public int register()
+        public static int register()
         {
             if (password.Length >= 8)
             {

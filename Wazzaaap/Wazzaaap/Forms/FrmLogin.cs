@@ -92,12 +92,11 @@ namespace Wazzaaap.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            user_bl teste = new user_bl();
-            teste.username = txtBoxUserLogin.Text;
-            teste.password = textBoxPassLogin.Text;
-            teste.login();
+            user_bl.username = txtBoxUserLogin.Text;
+            user_bl.password = textBoxPassLogin.Text;
+            user_bl.login();
 
-            if (teste.login() == 1)
+            if (user_bl.login() == 1)
             {
                 this.Hide();
                 frmmainWazzaapp f2 = new frmmainWazzaapp();

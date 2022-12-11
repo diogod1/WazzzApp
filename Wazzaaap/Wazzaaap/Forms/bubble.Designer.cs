@@ -34,10 +34,11 @@
             // 
             // lblMessage
             // 
+            this.lblMessage.Font = new System.Drawing.Font("Dubai Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMessage.ForeColor = System.Drawing.Color.White;
-            this.lblMessage.Location = new System.Drawing.Point(15, 12);
+            this.lblMessage.Location = new System.Drawing.Point(3, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(522, 99);
+            this.lblMessage.Size = new System.Drawing.Size(522, 32);
             this.lblMessage.TabIndex = 0;
             this.lblMessage.Click += new System.EventHandler(this.label1_Click);
             this.lblMessage.Resize += new System.EventHandler(this.lblMessage_Resize);
@@ -45,11 +46,13 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Dubai Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(23, 96);
+            this.lblTime.Location = new System.Drawing.Point(3, 60);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(0, 15);
+            this.lblTime.Size = new System.Drawing.Size(0, 21);
             this.lblTime.TabIndex = 1;
+            this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
             // bubble
             // 
@@ -59,7 +62,7 @@
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblMessage);
             this.Name = "bubble";
-            this.Size = new System.Drawing.Size(552, 127);
+            this.Size = new System.Drawing.Size(552, 85);
             this.Load += new System.EventHandler(this.bubble_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

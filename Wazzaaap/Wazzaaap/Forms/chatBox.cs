@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.ComponentModel.Design;
 using Newtonsoft.Json;
 using Wazzaaap.Model;
+using Wazzaaap.BLL;
 
 namespace Wazzaaap.Forms
 {
@@ -17,12 +18,17 @@ namespace Wazzaaap.Forms
     {
         public chatBox()
         {
-           // GetHist();
+            //GetHist();
             if (!this.DesignMode)
             { 
                 InitializeComponent();
                 bubble1.Visible = false;
             }
+        }
+        public void ResetForm()
+        {
+            InitializeComponent();
+            
         }
 
         int curtop = 10;
@@ -35,6 +41,7 @@ namespace Wazzaaap.Forms
             bbl.Anchor = bubble1.Anchor;
             bbl.Top = bbl_old.Bottom + 10;
             panel2.Controls.Add(bbl);
+            PicBottom.Top = bbl.Bottom + 30;
 
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
 
@@ -44,7 +51,7 @@ namespace Wazzaaap.Forms
         public void addOutMessage(string message, string time)
         {
             bubble bbl = new bubble(message, time, msgtype.Out );
-            bbl.Location = bubble1.Location; bbl.Left += 400;
+            bbl.Location = bubble1.Location; bbl.Left += 270;
             bbl.Size = bubble1.Size;
             bbl.Anchor = bubble1.Anchor;
             bbl.Top = bbl_old.Bottom + 10;
@@ -60,7 +67,7 @@ namespace Wazzaaap.Forms
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
         }
 
-        public async Task GetHist()
+        public async Task GetHist(int _chatid)
         {
             //teste API diogo duarte--------------------------------------------------
             HttpClient client = new HttpClient();
@@ -70,10 +77,10 @@ namespace Wazzaaap.Forms
                 var response = await client.GetAsync("https://localhost:7011/api/Message/get-all-messages");
                 string jsonresponse = await response.Content.ReadAsStringAsync();
                 var hist = JsonConvert.DeserializeObject<messages[]>(jsonresponse);
-
+                
                 foreach (var item in hist)
                 {
-                    if (item.userid == userid)
+                    if (item.userid == user_bl.id && item.chatid == _chatid)
                     {
                         addInMessage(item.content, item.sentAt.ToString());
                     }
@@ -85,9 +92,8 @@ namespace Wazzaaap.Forms
             }
             catch (Exception e)
             {
-
+                MessageBox.Show(e.Message);
             }
-
             //teste API diogo duarte----------------------------------------------------------
         }
     }

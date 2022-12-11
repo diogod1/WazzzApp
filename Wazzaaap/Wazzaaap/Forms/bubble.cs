@@ -64,6 +64,11 @@ namespace Wazzaaap.Forms
         {
             Setheight();
         }
+
+        private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public enum msgtype

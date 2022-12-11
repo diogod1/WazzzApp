@@ -83,11 +83,10 @@ namespace Wazzaaap.Forms
             }
             else
             {
-                user_bl teste = new user_bl();
-                teste.username = textBoxUserReg.Text;
-                teste.name = textBoxNameReg.Text;
-                teste.password = textBoxPassReg.Text;
-                if(teste.register() == 2)
+                user_bl.username = textBoxUserReg.Text;
+                user_bl.name = textBoxNameReg.Text;
+                user_bl.password = textBoxPassReg.Text;
+                if(user_bl.register() == 2)
                 {
                     lblPassConditionReg.ForeColor = System.Drawing.Color.Red;
                 }                
