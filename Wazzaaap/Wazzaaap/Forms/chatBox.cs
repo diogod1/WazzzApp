@@ -71,7 +71,6 @@ namespace Wazzaaap.Forms
         {
             //teste API diogo duarte--------------------------------------------------
             HttpClient client = new HttpClient();
-            var userid = 1;
             try
             {
                 var response = await client.GetAsync("https://localhost:7011/api/Message/get-all-messages");

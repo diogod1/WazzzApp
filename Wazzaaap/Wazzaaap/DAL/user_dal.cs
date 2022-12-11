@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Data;
 using Wazzaaap.BLL;
 
 namespace Wazzaaap.DAL
@@ -65,7 +66,28 @@ namespace Wazzaaap.DAL
                 }
                 else { return 0; }
             }
+            con.Close();
             return 0;
+        }
+
+        public void init_user(string username)
+        {
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT * FROM users WHERE username = '" + username + "'";
+            con.Open();
+            MySqlDataReader rdr = cmd.ExecuteReader();
+
+            if (rdr != null)
+            {
+                while (rdr.Read())
+                {
+                    user_bl.id = (int)rdr.GetInt64(0);
+                    user_bl.password = rdr.GetString(2);
+                    user_bl.name = rdr.GetString(3);
+                    user_bl.bio = rdr.GetString(4);
+                    user_bl.status = rdr.GetString(5);
+                }
+            }
         }
     }
 }

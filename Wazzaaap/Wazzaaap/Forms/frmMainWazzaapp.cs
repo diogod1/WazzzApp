@@ -47,7 +47,7 @@ namespace Wazzaaap.Forms
         {
             //chat general
             chatid = 2;
-            chatBox1.ResetForm();
+            //chatBox1.ResetForm();
             chatBox1.GetHist(chatid);
             chatBox1.Refresh();
         }

@@ -46,5 +46,11 @@ namespace Wazzaaap.BLL
                 return 2;//Retorna 2 Falha de Password
             }
         }
+
+        public static void init_user(string username)
+        {
+            user_dal ini_user = new user_dal(); 
+            ini_user.init_user(username);
+        }
     }
 }

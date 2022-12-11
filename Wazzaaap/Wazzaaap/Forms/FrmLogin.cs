@@ -98,6 +98,7 @@ namespace Wazzaaap.Forms
 
             if (user_bl.login() == 1)
             {
+                user_bl.init_user(user_bl.username);
                 this.Hide();
                 frmmainWazzaapp f2 = new frmmainWazzaapp();
                 f2.Show();
