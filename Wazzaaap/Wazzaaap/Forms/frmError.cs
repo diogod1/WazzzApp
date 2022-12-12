@@ -19,12 +19,20 @@ namespace Wazzaaap.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmLogin f3 = new frmLogin();
-            f3.Show();
+            this.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUserPassWrong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmError_Load(object sender, EventArgs e)
         {
 
         }

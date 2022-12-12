@@ -75,7 +75,7 @@
             this.btnCreateAcc.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCreateAcc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAcc.ForeColor = System.Drawing.Color.White;
-            this.btnCreateAcc.Location = new System.Drawing.Point(128, 479);
+            this.btnCreateAcc.Location = new System.Drawing.Point(117, 479);
             this.btnCreateAcc.Name = "btnCreateAcc";
             this.btnCreateAcc.Size = new System.Drawing.Size(118, 40);
             this.btnCreateAcc.TabIndex = 2;
@@ -107,7 +107,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(117, 522);
+            this.linkLabel1.Location = new System.Drawing.Point(106, 522);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(142, 15);
             this.linkLabel1.TabIndex = 5;

@@ -105,9 +105,8 @@ namespace Wazzaaap.Forms
             }
             else
             {
-                this.Hide();
                 frmError f4 = new frmError();
-                f4.Show(); ;
+                f4.Show(); 
             }
 
         }
