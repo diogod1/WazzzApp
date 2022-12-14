@@ -94,8 +94,7 @@ namespace Wazzaaap.Forms
         {
             user_bl.username = txtBoxUserLogin.Text;
             user_bl.password = textBoxPassLogin.Text;
-            user_bl.login();
-
+            
             if (user_bl.login() == 1)
             {
                 user_bl.init_user(user_bl.username);
