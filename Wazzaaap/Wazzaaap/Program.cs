@@ -16,8 +16,7 @@ namespace Wazzaaap
 
             ApplicationConfiguration.Initialize();
             
-           // Application.Run(new frmLogin());
-            Application.Run(new FrmUserProfile());
+            Application.Run(new frmLogin());
         }
     }
 }

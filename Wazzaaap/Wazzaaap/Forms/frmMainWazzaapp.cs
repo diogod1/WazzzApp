@@ -100,6 +100,12 @@ namespace Wazzaaap.Forms
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmUserProfile fup = new FrmUserProfile();
+            fup.Show();
+        }
     }
     
 }

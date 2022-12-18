@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Wazzaaap.BLL;
 
 namespace Wazzaaap.Forms
 {
@@ -18,6 +19,15 @@ namespace Wazzaaap.Forms
         public FrmUserProfile()
         {
             InitializeComponent();
+            initObjects();
+        }
+        public void initObjects()
+        {
+            txtBoxBio.Text = user_bl.bio;
+            txtBoxUsername.Text = user_bl.username;
+            txtBoxNome.Text = user_bl.name;
+           // picBoxPhoto.Image = user_bl.photopath;
+           comboBoxStatus.Text = user_bl.status;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

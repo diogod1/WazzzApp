@@ -11,6 +11,7 @@ namespace Wazzaaap.BLL
         public static string name;
         public static string  bio;
         public static string  status;
+        public static string photopath;
 
 
         public static int login()
