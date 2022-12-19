@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmmainWazzaapp));
             this.pnlHeaderWazzaapp = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picBoxMinimizeWazzaapp = new System.Windows.Forms.PictureBox();
             this.picBoxExitWazzaapp = new System.Windows.Forms.PictureBox();
             this.lblWazzaapp = new System.Windows.Forms.Label();
@@ -49,9 +50,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUser1 = new System.Windows.Forms.Button();
             this.pnlMainWazzaapp = new System.Windows.Forms.Panel();
-            this.chatBox1 = new Wazzaaap.Forms.chatBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlHeaderWazzaapp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).BeginInit();
@@ -63,8 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnlMainWazzaapp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeaderWazzaapp
@@ -84,6 +82,17 @@
             this.pnlHeaderWazzaapp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mouseDown_Event);
             this.pnlHeaderWazzaapp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mouseMove_Event);
             this.pnlHeaderWazzaapp.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mouseUp_Event);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(168, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // picBoxMinimizeWazzaapp
             // 
@@ -286,31 +295,12 @@
             // 
             // pnlMainWazzaapp
             // 
-            this.pnlMainWazzaapp.Controls.Add(this.chatBox1);
             this.pnlMainWazzaapp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainWazzaapp.Location = new System.Drawing.Point(307, 76);
             this.pnlMainWazzaapp.Name = "pnlMainWazzaapp";
             this.pnlMainWazzaapp.Size = new System.Drawing.Size(862, 636);
             this.pnlMainWazzaapp.TabIndex = 6;
             this.pnlMainWazzaapp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainWazzaapp_Paint);
-            // 
-            // chatBox1
-            // 
-            this.chatBox1.Location = new System.Drawing.Point(0, 0);
-            this.chatBox1.Name = "chatBox1";
-            this.chatBox1.Size = new System.Drawing.Size(862, 636);
-            this.chatBox1.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(168, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // frmmainWazzaapp
             // 
@@ -329,6 +319,7 @@
             this.Text = "frmMainWazzaapp";
             this.pnlHeaderWazzaapp.ResumeLayout(false);
             this.pnlHeaderWazzaapp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).EndInit();
@@ -341,8 +332,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlMainWazzaapp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,7 +357,6 @@
         private PictureBox pictureBox1;
         private Button btnUser1;
         private Panel pnlMainWazzaapp;
-        private chatBox chatBox1;
         private PictureBox picBoxMinimizeWazzaapp;
         private PictureBox pictureBox2;
     }

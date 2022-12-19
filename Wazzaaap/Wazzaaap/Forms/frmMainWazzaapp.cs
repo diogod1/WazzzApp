@@ -47,9 +47,14 @@ namespace Wazzaaap.Forms
         {
             //chat general
             chatid = 2;
-            //chatBox1.ResetForm();
-            chatBox1.GetHist(chatid);
-            chatBox1.Refresh();
+            Size tamanho = new Size(862, 636);
+            chatBox ch2 = new chatBox();
+            ch2.Size = tamanho;
+            ch2.GetHist(chatid);
+            ch2.Refresh();
+            ch2.Show();
+            this.Controls.Add(ch2);
+            pnlMainWazzaapp.Controls.Add((Control)ch2);
         }
 
         private void pnlMainWazzaapp_Paint(object sender, PaintEventArgs e)
@@ -90,10 +95,19 @@ namespace Wazzaaap.Forms
 
         private void btnUser1_Click(object sender, EventArgs e)
         {
+            //size 862; 636
             //chat general2
+            pnlMainWazzaapp.Controls.Clear();
             chatid = 1;
-            chatBox1.GetHist(chatid);
-            chatBox1.Refresh();
+            Size tamanho = new Size(862, 636);
+            chatBox ch1 = new chatBox();
+            ch1.Size = tamanho;
+            ch1.GetHist(chatid);
+            ch1.Refresh();
+            ch1.Show();
+            this.Controls.Add(ch1); 
+            pnlMainWazzaapp.Controls.Add((Control)ch1);
+            
         }
 
         private void btnUser4_Click(object sender, EventArgs e)

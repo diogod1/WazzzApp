@@ -83,7 +83,7 @@ namespace Wazzaaap.Forms
                     {
                         addInMessage(item.content, item.sentAt.ToString());
                     }
-                    else
+                    else if(item.chatid == _chatid && item.userid != user_bl.id)
                     {
                         addOutMessage(item.content, item.sentAt.ToString());
                     }
