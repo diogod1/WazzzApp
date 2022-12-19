@@ -47,6 +47,7 @@ namespace Wazzaaap.Forms
             if (file_dialog.ShowDialog() == DialogResult.OK)
             {
                 var file_path = file_dialog.FileName;
+                picBoxPhoto.Image = Image.FromFile(file_path);
             }
         }
 

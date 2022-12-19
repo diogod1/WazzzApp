@@ -11,11 +11,14 @@ using System.ComponentModel.Design;
 using Newtonsoft.Json;
 using Wazzaaap.Model;
 using Wazzaaap.BLL;
+using System.Reflection.Metadata;
+using System.Net.Http.Json;
 
 namespace Wazzaaap.Forms
 {
     public  partial class chatBox : UserControl
     {
+        private static readonly HttpClient client = new HttpClient();
         public chatBox()
         {
             //GetHist();
@@ -25,14 +28,11 @@ namespace Wazzaaap.Forms
                 bubble1.Visible = false;
             }
         }
-        public void ResetForm()
-        {
-            InitializeComponent();
-            
-        }
 
         int curtop = 10;
         bubble bbl_old = new bubble();
+        public int chatid { get; set; }
+
         public void addInMessage(string message,string time)
         {
             bubble bbl = new bubble(message,time,msgtype.In);
@@ -65,12 +65,14 @@ namespace Wazzaaap.Forms
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
+            SendMessage(chatid);
+            addInMessage(richTextBox1.Text, DateTime.Now.ToString());
+            richTextBox1.Clear();
         }
 
         public async Task GetHist(int _chatid)
         {
             //teste API diogo duarte--------------------------------------------------
-            HttpClient client = new HttpClient();
             try
             {
                 var response = await client.GetAsync("https://localhost:7011/api/Message/get-all-messages");
@@ -94,6 +96,41 @@ namespace Wazzaaap.Forms
                 MessageBox.Show(e.Message);
             }
             //teste API diogo duarte----------------------------------------------------------
+        }
+
+        public async Task SendMessage(int _chatid)
+        {
+            using (var client = new HttpClient())
+            {
+                messages p = new messages { userid = user_bl.id, chatid = _chatid, content = richTextBox1.Text, sentAt = DateTime.Now };
+                client.BaseAddress = new Uri("https://localhost:7011/");
+                var response = client.PostAsJsonAsync("api/Message", p).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                }
+                else
+                {
+                    MessageBox.Show("Erro no envio da mensagem");
+                } 
+            }
+        }
+
+        private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (richTextBox1.Text != null)
+                {
+                    SendMessage(chatid);
+                    addInMessage(richTextBox1.Text, DateTime.Now.ToString());
+                    richTextBox1.Clear();
+                }
+            }
         }
     }
 }

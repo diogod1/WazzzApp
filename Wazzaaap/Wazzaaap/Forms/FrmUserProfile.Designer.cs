@@ -197,7 +197,7 @@
             this.txtBoxBio.BackColor = System.Drawing.Color.LightGray;
             this.txtBoxBio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxBio.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxBio.Location = new System.Drawing.Point(60, 329);
+            this.txtBoxBio.Location = new System.Drawing.Point(60, 321);
             this.txtBoxBio.Name = "txtBoxBio";
             this.txtBoxBio.ReadOnly = true;
             this.txtBoxBio.Size = new System.Drawing.Size(389, 28);
@@ -207,7 +207,7 @@
             // 
             this.lblBio.AutoSize = true;
             this.lblBio.ForeColor = System.Drawing.Color.DimGray;
-            this.lblBio.Location = new System.Drawing.Point(60, 311);
+            this.lblBio.Location = new System.Drawing.Point(60, 303);
             this.lblBio.Name = "lblBio";
             this.lblBio.Size = new System.Drawing.Size(24, 15);
             this.lblBio.TabIndex = 15;

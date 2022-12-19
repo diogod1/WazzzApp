@@ -140,7 +140,7 @@
             // 
             // pnlSearchHeaderWazzaapp
             // 
-            this.pnlSearchHeaderWazzaapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.pnlSearchHeaderWazzaapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(157)))), ((int)(((byte)(198)))));
             this.pnlSearchHeaderWazzaapp.Controls.Add(this.pnlSideSearchWazzaapp);
             this.pnlSearchHeaderWazzaapp.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSearchHeaderWazzaapp.Location = new System.Drawing.Point(0, 33);
@@ -169,7 +169,7 @@
             // 
             // txtBoxSearchWazzaapp
             // 
-            this.txtBoxSearchWazzaapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(162)))), ((int)(((byte)(251)))));
+            this.txtBoxSearchWazzaapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(157)))), ((int)(((byte)(198)))));
             this.txtBoxSearchWazzaapp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBoxSearchWazzaapp.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtBoxSearchWazzaapp.ForeColor = System.Drawing.Color.White;

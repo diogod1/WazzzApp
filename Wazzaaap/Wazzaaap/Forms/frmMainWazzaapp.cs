@@ -13,6 +13,8 @@ using System.Windows.Forms;
 using System.Net.Http;
 using Wazzaaap.Model;
 using MySqlX.XDevAPI.Common;
+using Org.BouncyCastle.Crypto.Engines;
+using Org.BouncyCastle.Crypto.Tls;
 
 namespace Wazzaaap.Forms
 {
@@ -46,6 +48,7 @@ namespace Wazzaaap.Forms
         private void btnUser2_Click(object sender, EventArgs e)
         {
             //chat general
+            pnlMainWazzaapp.Controls.Clear();
             chatid = 2;
             Size tamanho = new Size(862, 636);
             chatBox ch2 = new chatBox();
@@ -55,6 +58,7 @@ namespace Wazzaaap.Forms
             ch2.Show();
             this.Controls.Add(ch2);
             pnlMainWazzaapp.Controls.Add((Control)ch2);
+            ch2.chatid = chatid;
         }
 
         private void pnlMainWazzaapp_Paint(object sender, PaintEventArgs e)
@@ -98,7 +102,7 @@ namespace Wazzaaap.Forms
             //size 862; 636
             //chat general2
             pnlMainWazzaapp.Controls.Clear();
-            chatid = 1;
+            chatid = 1; 
             Size tamanho = new Size(862, 636);
             chatBox ch1 = new chatBox();
             ch1.Size = tamanho;
@@ -107,7 +111,7 @@ namespace Wazzaaap.Forms
             ch1.Show();
             this.Controls.Add(ch1); 
             pnlMainWazzaapp.Controls.Add((Control)ch1);
-            
+            ch1.chatid= chatid;
         }
 
         private void btnUser4_Click(object sender, EventArgs e)
