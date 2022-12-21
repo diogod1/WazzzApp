@@ -107,7 +107,6 @@ namespace Wazzaaap.Forms
                 frmError f4 = new frmError();
                 f4.Show(); 
             }
-
         }
 
         private void picBoxMinimizeLogin_Click(object sender, EventArgs e)
@@ -144,6 +143,31 @@ namespace Wazzaaap.Forms
         private void lblUsernameLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxPassLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (txtBoxUserLogin.Text != null || textBoxPassLogin.Text != null)
+                {
+                    user_bl.username = txtBoxUserLogin.Text;
+                    user_bl.password = textBoxPassLogin.Text;
+
+                    if (user_bl.login() == 1)
+                    {
+                        user_bl.init_user(user_bl.username);
+                        this.Hide();
+                        frmmainWazzaapp f2 = new frmmainWazzaapp();
+                        f2.Show();
+                    }
+                    else
+                    {
+                        frmError f4 = new frmError();
+                        f4.Show();
+                    }
+                }
+            }
         }
     }
 }

@@ -151,6 +151,7 @@
             this.textBoxPassLogin.PasswordChar = '*';
             this.textBoxPassLogin.Size = new System.Drawing.Size(190, 28);
             this.textBoxPassLogin.TabIndex = 11;
+            this.textBoxPassLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassLogin_KeyPress);
             // 
             // checkBoxShowPassLog
             // 
