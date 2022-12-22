@@ -13,6 +13,10 @@ using Wazzaaap.Model;
 using Wazzaaap.BLL;
 using System.Reflection.Metadata;
 using System.Net.Http.Json;
+using System.Timers;
+using System.Runtime.CompilerServices;
+using System.Web;
+using System.Net.Security;
 
 namespace Wazzaaap.Forms
 {
@@ -21,17 +25,59 @@ namespace Wazzaaap.Forms
         private static readonly HttpClient client = new HttpClient();
         public chatBox()
         {
-            //GetHist();
             if (!this.DesignMode)
             { 
                 InitializeComponent();
                 bubble1.Visible = false;
+                
             }
         }
 
         int curtop = 10;
         bubble bbl_old = new bubble();
         public int chatid { get; set; }
+        private System.Timers.Timer _timer;
+        private DateTime _lastChecked;
+
+        public void PoolingApi()
+        {
+            // Set up the timer to execute the CheckForNewRows task every 30 seconds
+            _timer = new System.Timers.Timer(1000);
+            _timer.Elapsed += CheckForNewRows;
+            _timer.Start();
+
+            // Set the initial value of _lastChecked to the current time
+            _lastChecked = DateTime.Now;
+        }
+
+        public void CheckForNewRows(object sender, ElapsedEventArgs e)
+        {
+            Task<string> response_task = CallMethodAPI();
+            string response_string = response_task.Result;
+
+            if (response_string != null)
+            {
+                var jsonresponse = JsonConvert.DeserializeObject<messages[]>(response_string);
+                foreach(var item in jsonresponse)
+                {
+                    if(item.id != user_bl.id)
+                    {
+                        addOutMessage(item.content,item.sentAt.ToString());
+                    }
+                }
+            }
+            //trocar a chamada da api para um novo metodo
+            //a seguir basta ----> CASO A API TRAGA RESULTADOS BASTAS ADICIONAR NO METODO ADD IN MESSAGE
+            //Nao esquecer de tratar do encoding url
+        }
+
+        public async Task<string> CallMethodAPI()
+        {
+            var response = await client.GetAsync("https://localhost:7011/api/Message/get-message-chatid?_chatid=" + chatid + "&_lastchecked=" + HttpUtility.UrlEncode(_lastChecked.ToString("hh:mm:ss")) +"");
+            string jsonresponse = await response.Content.ReadAsStringAsync();
+
+            return jsonresponse;
+        }
 
         public void addInMessage(string message,string time)
         {
@@ -55,7 +101,7 @@ namespace Wazzaaap.Forms
             bbl.Size = bubble1.Size;
             bbl.Anchor = bubble1.Anchor;
             bbl.Top = bbl_old.Bottom + 10;
-            panel2.Controls.Add(bbl);
+            panel2.Controls.Add(bbl); //THREAD ERROR : POSSIBLE SOLUTION INVOKE THREAD'S!
 
             PicBottom.Top = bbl.Bottom + 30;
 
