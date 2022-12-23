@@ -29,7 +29,7 @@ namespace Wazzaaap.Forms
             { 
                 InitializeComponent();
                 bubble1.Visible = false;
-                
+                PoolingApi();
             }
         }
 
@@ -42,7 +42,7 @@ namespace Wazzaaap.Forms
         public void PoolingApi()
         {
             // Set up the timer to execute the CheckForNewRows task every 30 seconds
-            _timer = new System.Timers.Timer(1000);
+            _timer = new System.Timers.Timer(2 * 1000);
             _timer.Elapsed += CheckForNewRows;
             _timer.Start();
 
@@ -52,19 +52,25 @@ namespace Wazzaaap.Forms
 
         public void CheckForNewRows(object sender, ElapsedEventArgs e)
         {
-            Task<string> response_task = CallMethodAPI();
-            string response_string = response_task.Result;
-
-            if (response_string != null)
+            try
             {
-                var jsonresponse = JsonConvert.DeserializeObject<messages[]>(response_string);
-                foreach(var item in jsonresponse)
+                Task<string> response_task = CallMethodAPI();
+                if(response_task == null)
                 {
-                    if(item.id != user_bl.id)
+                    string response_string = response_task.Result;
+                    var jsonresponse = JsonConvert.DeserializeObject<messages[]>(response_string);
+                    foreach (var item in jsonresponse)
                     {
-                        addOutMessage(item.content,item.sentAt.ToString());
+                        if (item.id != user_bl.id)
+                        {
+                            addOutMessage(item.content, item.sentAt.ToString());
+                        }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             //trocar a chamada da api para um novo metodo
             //a seguir basta ----> CASO A API TRAGA RESULTADOS BASTAS ADICIONAR NO METODO ADD IN MESSAGE
@@ -73,10 +79,17 @@ namespace Wazzaaap.Forms
 
         public async Task<string> CallMethodAPI()
         {
-            var response = await client.GetAsync("https://localhost:7011/api/Message/get-message-chatid?_chatid=" + chatid + "&_lastchecked=" + HttpUtility.UrlEncode(_lastChecked.ToString("hh:mm:ss")) +"");
-            string jsonresponse = await response.Content.ReadAsStringAsync();
+            var response = await client.GetAsync("https://localhost:7011/api/Message/get-message-chatid?_chatid=" + chatid + "&_lastchecked=" + _lastChecked.ToString("yyyy-MM-dd") + HttpUtility.UrlEncode(_lastChecked.ToString("THH:mm:ss")) + "");
+            if (response.IsSuccessStatusCode)
+            {
+                string jsonresponse = await response.Content.ReadAsStringAsync();
+                return jsonresponse;
+            }
+            else
+            {
+                return null;
+            }
 
-            return jsonresponse;
         }
 
         public void addInMessage(string message,string time)
@@ -96,16 +109,32 @@ namespace Wazzaaap.Forms
 
         public void addOutMessage(string message, string time)
         {
-            bubble bbl = new bubble(message, time, msgtype.Out );
-            bbl.Location = bubble1.Location; bbl.Left += 270;
-            bbl.Size = bubble1.Size;
-            bbl.Anchor = bubble1.Anchor;
-            bbl.Top = bbl_old.Bottom + 10;
-            panel2.Controls.Add(bbl); //THREAD ERROR : POSSIBLE SOLUTION INVOKE THREAD'S!
-
-            PicBottom.Top = bbl.Bottom + 30;
-
-            bbl_old = bbl;
+            if(panel2.InvokeRequired)
+            {
+                panel2.Invoke((MethodInvoker)delegate
+                {
+                    bubble bbl = new bubble(message, time, msgtype.Out);
+                    bbl.Location = bubble1.Location; bbl.Left += 270;
+                    bbl.Size = bubble1.Size;
+                    bbl.Anchor = bubble1.Anchor;
+                    bbl.Top = bbl_old.Bottom + 10;
+                    panel2.Controls.Add(bbl);
+                    PicBottom.Top = bbl.Bottom + 30;
+                    bbl_old = bbl;
+                });
+            }
+            else
+            {
+                bubble bbl2 = new bubble(message, time, msgtype.Out);
+                bbl2.Location = bubble1.Location; bbl2.Left += 270;
+                bbl2.Size = bubble1.Size;
+                bbl2.Anchor = bubble1.Anchor;
+                bbl2.Top = bbl_old.Bottom + 10;
+                panel2.Controls.Add(bbl2); 
+                PicBottom.Top = bbl2.Bottom + 30;
+                bbl_old = bbl2;
+            }
+            //THREAD ERROR : POSSIBLE SOLUTION INVOKE THREAD'S!
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

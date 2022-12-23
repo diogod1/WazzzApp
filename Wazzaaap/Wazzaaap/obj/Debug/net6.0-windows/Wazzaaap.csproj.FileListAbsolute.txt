@@ -79,7 +79,6 @@ C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\MySql.EntityFrameworkCore.dll
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.csproj.AssemblyReference.cache
-C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Form1.resources
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.bubble.resources
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.chatBox.resources
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.Forms.frmError.resources
