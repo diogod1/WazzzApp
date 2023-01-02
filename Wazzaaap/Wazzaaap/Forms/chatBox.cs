@@ -46,7 +46,7 @@ namespace Wazzaaap.Forms
             _timer.Elapsed += CheckForNewRows;
             _timer.Start();
 
-            // Set the initial value of _lastChecked to the current time
+            // Set the initial value o f _lastChecked to the current time
             _lastChecked = DateTime.Now;
         }
 
@@ -55,13 +55,13 @@ namespace Wazzaaap.Forms
             try
             {
                 Task<string> response_task = CallMethodAPI();
-                if(response_task == null)
+                if(response_task.Result != null)
                 {
                     string response_string = response_task.Result;
                     var jsonresponse = JsonConvert.DeserializeObject<messages[]>(response_string);
                     foreach (var item in jsonresponse)
                     {
-                        if (item.id != user_bl.id)
+                        if (item.userid != user_bl.id)
                         {
                             addOutMessage(item.content, item.sentAt.ToString());
                         }
@@ -79,7 +79,16 @@ namespace Wazzaaap.Forms
 
         public async Task<string> CallMethodAPI()
         {
-            var response = await client.GetAsync("https://localhost:7011/api/Message/get-message-chatid?_chatid=" + chatid + "&_lastchecked=" + _lastChecked.ToString("yyyy-MM-dd") + HttpUtility.UrlEncode(_lastChecked.ToString("THH:mm:ss")) + "");
+            string date = _lastChecked.ToString("yyyy-MM-dd");
+            string time = _lastChecked.ToString("HH:mm:ss");
+
+            // Encode the time part only
+            string encodedTime = HttpUtility.UrlEncode(time);
+
+            // Concatenate the date and time parts back together, using the "T" character as a separator
+            string formattedTime = date + "T" + encodedTime;
+
+            var response = await client.GetAsync("https://localhost:7011/api/Message/get-message-chatid?_chatid=" + chatid + "&_lastchecked=" + formattedTime + "");
             if (response.IsSuccessStatusCode)
             {
                 string jsonresponse = await response.Content.ReadAsStringAsync();
@@ -87,24 +96,44 @@ namespace Wazzaaap.Forms
             }
             else
             {
-                return null;
+                return await Task.FromResult<string>(null);
             }
-
         }
 
         public void addInMessage(string message,string time)
         {
-            bubble bbl = new bubble(message,time,msgtype.In);
-            bbl.Location = bubble1.Location;
-            bbl.Size = bubble1.Size;
-            bbl.Anchor = bubble1.Anchor;
-            bbl.Top = bbl_old.Bottom + 10;
-            panel2.Controls.Add(bbl);
-            PicBottom.Top = bbl.Bottom + 30;
+            if (panel2.InvokeRequired)
+            {
+                panel2.Invoke((MethodInvoker)delegate
+                {
+                    bubble bbl = new bubble(message, time, msgtype.In);
+                    bbl.Location = bubble1.Location;
+                    bbl.Size = bubble1.Size;
+                    bbl.Anchor = bubble1.Anchor;
+                    bbl.Top = bbl_old.Bottom + 10;
+                    panel2.Controls.Add(bbl);
+                    PicBottom.Top = bbl.Bottom + 30;
 
-            panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
+                    panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
 
-            bbl_old = bbl;
+                    bbl_old = bbl;
+                });
+            }
+            else
+            {
+                bubble bbl = new bubble(message, time, msgtype.In);
+                bbl.Location = bubble1.Location;
+                bbl.Size = bubble1.Size;
+                bbl.Anchor = bubble1.Anchor;
+                bbl.Top = bbl_old.Bottom + 10;
+                panel2.Controls.Add(bbl);
+                PicBottom.Top = bbl.Bottom + 30;
+
+                panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
+
+                bbl_old = bbl;
+            }
+            
         }
 
         public void addOutMessage(string message, string time)

@@ -107,7 +107,7 @@
             // PicBottom
             // 
             this.PicBottom.BackColor = System.Drawing.Color.Transparent;
-            this.PicBottom.Location = new System.Drawing.Point(27, 155);
+            this.PicBottom.Location = new System.Drawing.Point(27, 118);
             this.PicBottom.Name = "PicBottom";
             this.PicBottom.Size = new System.Drawing.Size(142, 53);
             this.PicBottom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -121,7 +121,7 @@
             this.bubble1.BackColor = System.Drawing.Color.SteelBlue;
             this.bubble1.Location = new System.Drawing.Point(27, 20);
             this.bubble1.Name = "bubble1";
-            this.bubble1.Size = new System.Drawing.Size(532, 106);
+            this.bubble1.Size = new System.Drawing.Size(532, 82);
             this.bubble1.TabIndex = 0;
             // 
             // chatBox

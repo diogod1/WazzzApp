@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlX.XDevAPI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace Wazzaaap.Model
         [Key]
         public int id { get; set; }
         public string name { get; set; }
+
+        public ICollection<chat> Chats { get; set; }
     }
 }

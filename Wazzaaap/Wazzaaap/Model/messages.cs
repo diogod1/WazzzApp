@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,5 +18,11 @@ namespace Wazzaaap.Model
         public string content { get; set; }
         [Timestamp]
         public DateTime sentAt { get; set; }
+
+        [ForeignKey("userid")]
+        public user User { get; set; }
+
+        [ForeignKey("chatid")]
+        public chat Chat { get; set; }
     }
 }
