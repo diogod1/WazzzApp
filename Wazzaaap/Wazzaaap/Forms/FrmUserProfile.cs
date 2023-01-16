@@ -47,6 +47,8 @@ namespace Wazzaaap.Forms
             if (file_dialog.ShowDialog() == DialogResult.OK)
             {
                 var file_path = file_dialog.FileName;
+                byte[] imageBytes = File.ReadAllBytes(file_path);
+                /*CHAMAR API PARA GUARDAR IMAGEM*/
                 picBoxPhoto.Image = Image.FromFile(file_path);
             }
         }

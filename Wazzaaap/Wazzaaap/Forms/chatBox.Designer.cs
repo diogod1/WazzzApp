@@ -49,15 +49,15 @@
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 556);
+            this.panel1.Location = new System.Drawing.Point(0, 568);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 80);
+            this.panel1.Size = new System.Drawing.Size(862, 68);
             this.panel1.TabIndex = 0;
             // 
             // pnlChatBottomLine
             // 
             this.pnlChatBottomLine.BackColor = System.Drawing.Color.White;
-            this.pnlChatBottomLine.Location = new System.Drawing.Point(38, 63);
+            this.pnlChatBottomLine.Location = new System.Drawing.Point(39, 53);
             this.pnlChatBottomLine.Name = "pnlChatBottomLine";
             this.pnlChatBottomLine.Size = new System.Drawing.Size(700, 5);
             this.pnlChatBottomLine.TabIndex = 7;
@@ -71,7 +71,7 @@
             this.richTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.richTextBox1.Font = new System.Drawing.Font("Dubai Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.richTextBox1.Location = new System.Drawing.Point(38, 25);
+            this.richTextBox1.Location = new System.Drawing.Point(39, 15);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(698, 35);
             this.richTextBox1.TabIndex = 2;
@@ -83,7 +83,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(781, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(762, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(58, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +101,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(862, 556);
+            this.panel2.Size = new System.Drawing.Size(862, 568);
             this.panel2.TabIndex = 1;
             // 
             // PicBottom

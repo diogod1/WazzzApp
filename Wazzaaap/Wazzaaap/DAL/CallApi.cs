@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Json;
@@ -17,26 +18,20 @@ namespace Wazzaaap.DAL
 
         public CallApi()
         {
-            user_url = "https://localhost:7011/api/user";
+            user_url = "https://localhost:7011/api/User";
             message_url= "https://localhost:7011/api/Message";
         }
 
         public bool Registe_user(string username, string password, string nome)
         {
-            List<string> register_list = new List<string>
-            {
-                username,
-                password, 
-                nome
-            };
+            var payload = new { username = username, password = password, name = nome };
 
-            var json = System.Text.Json.JsonSerializer.Serialize(new { register_list });
+            var json = System.Text.Json.JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri(user_url);
-                var response = client.PostAsJsonAsync("/Regist-user", register_list).Result;
+                var response = client.PostAsync(""+user_url+"/Register", content).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -50,19 +45,13 @@ namespace Wazzaaap.DAL
 
         public bool login_user(string username,string password)
         {
-            List<string> login_list = new List<string>
-            {
-                username,
-                password
-            };
-
-            var json = System.Text.Json.JsonSerializer.Serialize(new { login_list });
+            var payload = new { username = username,password = password };
+            var json = JsonConvert.SerializeObject(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress= new Uri(user_url);
-                var response = client.PostAsJsonAsync("/login-user", content).Result;
+                var response = client.PostAsync(""+user_url+"/Login", content).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
