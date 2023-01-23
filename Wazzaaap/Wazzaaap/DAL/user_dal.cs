@@ -38,9 +38,9 @@ namespace Wazzaaap.DAL
             }
         }
 
-        public void init_user(string username)
+        public async void init_user(string username)
         {
-
+           await _callapi.search_user(username);
         }
     }
 }

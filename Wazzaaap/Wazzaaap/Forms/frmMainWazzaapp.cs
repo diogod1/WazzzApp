@@ -78,7 +78,6 @@ namespace Wazzaaap.Forms
             pnlMainWazzaapp.Controls.Add((Control)chat_dynamic);
             chat_dynamic.chatid = chatid;
             lblNameChat.Text = button.Text;
-
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)

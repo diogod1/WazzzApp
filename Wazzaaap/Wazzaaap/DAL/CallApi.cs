@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
+using Org.BouncyCastle.Asn1.Ocsp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using Wazzaaap.BLL;
 using Wazzaaap.Model;
@@ -59,6 +61,28 @@ namespace Wazzaaap.DAL
                 else
                 {
                     return false;
+                }
+            }
+        }
+
+        public async Task search_user(string username)
+        {
+            var encondedUsername = HttpUtility.UrlEncode(username);
+            using(var client = new HttpClient())
+            {
+                var response = await client.GetAsync(""+user_url+$"/Search?username={encondedUsername}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsoncontent = await response.Content.ReadAsStringAsync(); 
+                    user content = JsonConvert.DeserializeObject<user>(jsoncontent);
+                    user_bl.id = content.id;
+                    user_bl.name = content.name;
+                    user_bl.bio = content.bio;
+                    user_bl.status = content.status;
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao inciar o objeto");
                 }
             }
         }

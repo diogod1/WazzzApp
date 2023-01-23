@@ -170,7 +170,6 @@ namespace Wazzaaap.Forms
         {
             panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
             SendMessage(chatid);
-            addInMessage(richTextBox1.Text, DateTime.Now.ToString());
             richTextBox1.Clear();
         }
 
@@ -179,19 +178,22 @@ namespace Wazzaaap.Forms
             //teste API diogo duarte--------------------------------------------------
             try
             {
-                var response = await client.GetAsync("https://localhost:7011/api/Message/get-all-messages");
-                string jsonresponse = await response.Content.ReadAsStringAsync();
-                var hist = JsonConvert.DeserializeObject<messages[]>(jsonresponse);
-                
-                foreach (var item in hist)
+                var response = await client.GetAsync("https://localhost:7011/api/Message/get-all");
+                if (response.IsSuccessStatusCode)
                 {
-                    if (item.userid == user_bl.id && item.chatid == _chatid)
+                    string jsonresponse = await response.Content.ReadAsStringAsync();
+                    var hist = JsonConvert.DeserializeObject<messages[]>(jsonresponse);
+
+                    foreach (var item in hist)
                     {
-                        addInMessage(item.content, item.sentAt.ToString());
-                    }
-                    else if(item.chatid == _chatid && item.userid != user_bl.id)
-                    {
-                        addOutMessage(item.content, item.sentAt.ToString());
+                        if (item.userid == user_bl.id && item.chatid == _chatid)
+                        {
+                            addInMessage(item.content, item.sentAt.ToString());
+                        }
+                        else if (item.chatid == _chatid && item.userid != user_bl.id)
+                        {
+                            addOutMessage(item.content, item.sentAt.ToString());
+                        }
                     }
                 }
             }
@@ -206,11 +208,12 @@ namespace Wazzaaap.Forms
         {
             using (var client = new HttpClient())
             {
-                messages p = new messages { userid = user_bl.id, chatid = _chatid, content = richTextBox1.Text, sentAt = DateTime.Now };
+                var sendmessage = new messages { userid = user_bl.id, chatid = _chatid, content = richTextBox1.Text, sentAt = DateTime.Now };
                 client.BaseAddress = new Uri("https://localhost:7011/");
-                var response = client.PostAsJsonAsync("api/Message", p).Result;
+                var response = client.PostAsJsonAsync("api/Message/Send", sendmessage).Result;
                 if (response.IsSuccessStatusCode)
                 {
+                    addInMessage(richTextBox1.Text, DateTime.Now.ToString());
                 }
                 else
                 {
@@ -231,7 +234,6 @@ namespace Wazzaaap.Forms
                 if (richTextBox1.Text != null)
                 {
                     SendMessage(chatid);
-                    addInMessage(richTextBox1.Text, DateTime.Now.ToString());
                     richTextBox1.Clear();
                 }
             }

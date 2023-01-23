@@ -18,11 +18,5 @@ namespace Wazzaaap.Model
         public string content { get; set; }
         [Timestamp]
         public DateTime sentAt { get; set; }
-
-        [ForeignKey("userid")]
-        public user User { get; set; }
-
-        [ForeignKey("chatid")]
-        public chat Chat { get; set; }
     }
 }
