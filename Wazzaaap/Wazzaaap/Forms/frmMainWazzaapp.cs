@@ -38,7 +38,7 @@ namespace Wazzaaap.Forms
             {
                 var response = await client.GetAsync("https://localhost:7011/api/Message/get-all-chats");
                 string jsonresponse = await response.Content.ReadAsStringAsync();
-                var chats = JsonConvert.DeserializeObject<chat[]>(jsonresponse);
+                var chats = JsonConvert.DeserializeObject<chats[]>(jsonresponse);
                 var location = new Point(0, 0);
 
                 foreach (var item in chats)

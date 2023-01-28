@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Wazzaaap.Model
 {
-    internal class AppDbContext :DbContext
+    internal class AppDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -15,7 +10,9 @@ namespace Wazzaaap.Model
         }
         public DbSet<user> users { get; set; }
         public DbSet<messages> messages { get; set; }
-        public DbSet<chat> chats { get; set; }
-        
+        public DbSet<chats> chats { get; set; }
+        public DbSet<groups> groups { get; set; }
+        public DbSet<users_chats> users_chats { get; set; }
+        public DbSet<users_groups> users_groups { get; set; }
     }
 }

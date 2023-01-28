@@ -1,32 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Newtonsoft.Json;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.ComponentModel.Design;
-using Newtonsoft.Json;
-using Wazzaaap.Model;
-using Wazzaaap.BLL;
-using System.Reflection.Metadata;
 using System.Net.Http.Json;
 using System.Timers;
-using System.Runtime.CompilerServices;
 using System.Web;
-using System.Net.Security;
+using Wazzaaap.BLL;
+using Wazzaaap.Model;
 
 namespace Wazzaaap.Forms
 {
-    public  partial class chatBox : UserControl
+    public partial class chatBox : UserControl
     {
         private static readonly HttpClient client = new HttpClient();
         public chatBox()
         {
             if (!this.DesignMode)
-            { 
+            {
                 InitializeComponent();
                 bubble1.Visible = false;
                 PoolingApi();
@@ -47,7 +35,7 @@ namespace Wazzaaap.Forms
             _timer.Start();
 
             // Set the initial value o f _lastChecked to the current time
-            _lastChecked = DateTime.Now;
+            /// _lastChecked = DateTime.Now;
         }
 
         public void CheckForNewRows(object sender, ElapsedEventArgs e)
@@ -55,10 +43,13 @@ namespace Wazzaaap.Forms
             try
             {
                 Task<string> response_task = CallMethodAPI();
-                if(response_task.Result != null)
+                if (response_task.Result != null)
                 {
                     string response_string = response_task.Result;
                     var jsonresponse = JsonConvert.DeserializeObject<messages[]>(response_string);
+                    var last_message = JsonConvert.DeserializeObject<List<messages>>(response_string);
+                    var mostRecentMessage = last_message.Where(m => m.chatid == chatid).OrderByDescending(m => m.sentAt).FirstOrDefault();
+                    _lastChecked = mostRecentMessage.sentAt;
                     foreach (var item in jsonresponse)
                     {
                         if (item.userid != user_bl.id)
@@ -68,7 +59,7 @@ namespace Wazzaaap.Forms
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -88,7 +79,7 @@ namespace Wazzaaap.Forms
             // Concatenate the date and time parts back together, using the "T" character as a separator
             string formattedTime = date + "T" + encodedTime;
 
-            var response = await client.GetAsync("https://localhost:7011/api/Message/get-message-chatid?_chatid=" + chatid + "&_lastchecked=" + formattedTime + "");
+            var response = await client.GetAsync("https://localhost:7011/api/Message/get-chatid?_chatid=" + chatid + "&_lastchecked=" + formattedTime + "");
             if (response.IsSuccessStatusCode)
             {
                 string jsonresponse = await response.Content.ReadAsStringAsync();
@@ -100,7 +91,7 @@ namespace Wazzaaap.Forms
             }
         }
 
-        public void addInMessage(string message,string time)
+        public void addInMessage(string message, string time)
         {
             if (panel2.InvokeRequired)
             {
@@ -133,12 +124,12 @@ namespace Wazzaaap.Forms
 
                 bbl_old = bbl;
             }
-            
+
         }
 
         public void addOutMessage(string message, string time)
         {
-            if(panel2.InvokeRequired)
+            if (panel2.InvokeRequired)
             {
                 panel2.Invoke((MethodInvoker)delegate
                 {
@@ -159,7 +150,7 @@ namespace Wazzaaap.Forms
                 bbl2.Size = bubble1.Size;
                 bbl2.Anchor = bubble1.Anchor;
                 bbl2.Top = bbl_old.Bottom + 10;
-                panel2.Controls.Add(bbl2); 
+                panel2.Controls.Add(bbl2);
                 PicBottom.Top = bbl2.Bottom + 30;
                 bbl_old = bbl2;
             }
@@ -183,7 +174,12 @@ namespace Wazzaaap.Forms
                 {
                     string jsonresponse = await response.Content.ReadAsStringAsync();
                     var hist = JsonConvert.DeserializeObject<messages[]>(jsonresponse);
-
+                    var last_message = JsonConvert.DeserializeObject<List<messages>>(jsonresponse);
+                    var mostRecentMessage = last_message.Where(m => m.chatid == chatid).OrderByDescending(m => m.sentAt).FirstOrDefault();
+                    if (mostRecentMessage != null)
+                    {
+                        _lastChecked = mostRecentMessage.sentAt;
+                    }
                     foreach (var item in hist)
                     {
                         if (item.userid == user_bl.id && item.chatid == _chatid)
@@ -195,6 +191,7 @@ namespace Wazzaaap.Forms
                             addOutMessage(item.content, item.sentAt.ToString());
                         }
                     }
+
                 }
             }
             catch (Exception e)
@@ -218,13 +215,13 @@ namespace Wazzaaap.Forms
                 else
                 {
                     MessageBox.Show("Erro no envio da mensagem");
-                } 
+                }
             }
         }
 
         private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void richTextBox1_KeyPress(object sender, KeyPressEventArgs e)
