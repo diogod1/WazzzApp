@@ -7,6 +7,9 @@
     <Compile Update="Forms\chatBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Forms\FrmAlteraPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\frmError.cs">
       <SubType>Form</SubType>
     </Compile>

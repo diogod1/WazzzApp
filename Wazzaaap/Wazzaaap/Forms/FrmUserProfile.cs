@@ -116,5 +116,15 @@ namespace Wazzaaap.Forms
                 MessageBox.Show("Falha a guardar os dados");
             }
         }
+
+        private void btnAlteraPassword_Click(object sender, EventArgs e)
+        {
+            var frm = new FrmAlteraPassword();
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
+        }
     }
 }

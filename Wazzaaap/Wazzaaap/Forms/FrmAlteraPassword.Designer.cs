@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlteraPassword));
             this.pnlDragProfile = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picBoxMinimizeWazzaapp = new System.Windows.Forms.PictureBox();
             this.picBoxExitWazzaapp = new System.Windows.Forms.PictureBox();
             this.lblWazzaapp = new System.Windows.Forms.Label();
             this.picBoxIconWazzaap = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtPasswordAntiga = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtPasswordNova = new System.Windows.Forms.TextBox();
@@ -43,12 +43,13 @@
             this.txtPassRepeatNova = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.checkBoxShowPassLog = new System.Windows.Forms.CheckBox();
             this.pnlDragProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDragProfile
@@ -65,6 +66,18 @@
             this.pnlDragProfile.Name = "pnlDragProfile";
             this.pnlDragProfile.Size = new System.Drawing.Size(390, 33);
             this.pnlDragProfile.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(353, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -118,18 +131,6 @@
             this.picBoxIconWazzaap.TabIndex = 0;
             this.picBoxIconWazzaap.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(353, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // txtPasswordAntiga
             // 
             this.txtPasswordAntiga.BackColor = System.Drawing.Color.LightGray;
@@ -137,7 +138,7 @@
             this.txtPasswordAntiga.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPasswordAntiga.Location = new System.Drawing.Point(95, 76);
             this.txtPasswordAntiga.Name = "txtPasswordAntiga";
-            this.txtPasswordAntiga.ReadOnly = true;
+            this.txtPasswordAntiga.PasswordChar = '*';
             this.txtPasswordAntiga.Size = new System.Drawing.Size(190, 28);
             this.txtPasswordAntiga.TabIndex = 14;
             // 
@@ -158,7 +159,7 @@
             this.txtPasswordNova.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPasswordNova.Location = new System.Drawing.Point(95, 138);
             this.txtPasswordNova.Name = "txtPasswordNova";
-            this.txtPasswordNova.ReadOnly = true;
+            this.txtPasswordNova.PasswordChar = '*';
             this.txtPasswordNova.Size = new System.Drawing.Size(190, 28);
             this.txtPasswordNova.TabIndex = 16;
             // 
@@ -179,7 +180,7 @@
             this.txtPassRepeatNova.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPassRepeatNova.Location = new System.Drawing.Point(95, 199);
             this.txtPassRepeatNova.Name = "txtPassRepeatNova";
-            this.txtPassRepeatNova.ReadOnly = true;
+            this.txtPassRepeatNova.PasswordChar = '*';
             this.txtPassRepeatNova.Size = new System.Drawing.Size(190, 28);
             this.txtPassRepeatNova.TabIndex = 18;
             // 
@@ -198,7 +199,7 @@
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(95, 255);
+            this.button1.Location = new System.Drawing.Point(95, 270);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 33);
             this.button1.TabIndex = 21;
@@ -206,11 +207,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // checkBoxShowPassLog
+            // 
+            this.checkBoxShowPassLog.AutoSize = true;
+            this.checkBoxShowPassLog.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxShowPassLog.ForeColor = System.Drawing.Color.Black;
+            this.checkBoxShowPassLog.Location = new System.Drawing.Point(178, 233);
+            this.checkBoxShowPassLog.Name = "checkBoxShowPassLog";
+            this.checkBoxShowPassLog.Size = new System.Drawing.Size(107, 17);
+            this.checkBoxShowPassLog.TabIndex = 22;
+            this.checkBoxShowPassLog.Text = "Show Password";
+            this.checkBoxShowPassLog.UseVisualStyleBackColor = true;
+            this.checkBoxShowPassLog.CheckedChanged += new System.EventHandler(this.checkBoxShowPassLog_CheckedChanged);
+            // 
             // FrmAlteraPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(390, 315);
+            this.Controls.Add(this.checkBoxShowPassLog);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPassRepeatNova);
             this.Controls.Add(this.label2);
@@ -223,11 +238,11 @@
             this.Name = "FrmAlteraPassword";
             this.pnlDragProfile.ResumeLayout(false);
             this.pnlDragProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +264,6 @@
         private TextBox txtPassRepeatNova;
         private Label label2;
         private Button button1;
+        private CheckBox checkBoxShowPassLog;
     }
 }

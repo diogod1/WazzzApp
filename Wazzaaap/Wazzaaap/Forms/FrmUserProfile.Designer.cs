@@ -47,6 +47,7 @@
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAlteraPassword = new System.Windows.Forms.Button();
             this.pnlDragProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).BeginInit();
@@ -266,11 +267,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnAlteraPassword
+            // 
+            this.btnAlteraPassword.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAlteraPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlteraPassword.ForeColor = System.Drawing.Color.White;
+            this.btnAlteraPassword.Location = new System.Drawing.Point(204, 379);
+            this.btnAlteraPassword.Name = "btnAlteraPassword";
+            this.btnAlteraPassword.Size = new System.Drawing.Size(115, 33);
+            this.btnAlteraPassword.TabIndex = 21;
+            this.btnAlteraPassword.Text = "Alterar password";
+            this.btnAlteraPassword.UseVisualStyleBackColor = false;
+            this.btnAlteraPassword.Click += new System.EventHandler(this.btnAlteraPassword_Click);
+            // 
             // FrmUserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 429);
+            this.Controls.Add(this.btnAlteraPassword);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.comboBoxStatus);
@@ -319,5 +334,6 @@
         private ComboBox comboBoxStatus;
         private CheckBox checkBox1;
         private Button button1;
+        private Button btnAlteraPassword;
     }
 }
