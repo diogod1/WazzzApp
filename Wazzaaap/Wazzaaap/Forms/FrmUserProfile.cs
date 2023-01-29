@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Newtonsoft.Json;
 using Wazzaaap.BLL;
 
 namespace Wazzaaap.Forms
@@ -26,8 +18,8 @@ namespace Wazzaaap.Forms
             txtBoxBio.Text = user_bl.bio;
             txtBoxUsername.Text = user_bl.username;
             txtBoxNome.Text = user_bl.name;
-           // picBoxPhoto.Image = user_bl.photopath;
-           comboBoxStatus.Text = user_bl.status;
+            // picBoxPhoto.Image = user_bl.photopath;
+            comboBoxStatus.Text = user_bl.status;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -37,7 +29,7 @@ namespace Wazzaaap.Forms
 
         private void picBoxPhoto_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnChangePhoto_Click(object sender, EventArgs e)
@@ -92,6 +84,36 @@ namespace Wazzaaap.Forms
                 txtBoxBio.ReadOnly = true;
                 txtBoxNome.ReadOnly = true;
                 comboBoxStatus.Enabled = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HttpClient client = new HttpClient();
+
+            var json = new
+            {
+                name = txtBoxNome.Text,
+                bio = txtBoxBio.Text,
+                status = comboBoxStatus.Text,
+                photo_path = ""
+            };
+
+            var jsonString = JsonConvert.SerializeObject(json);
+            var content = new StringContent(jsonString, System.Text.Encoding.UTF8, "application/json");
+
+            var response = client.PutAsync($"https://localhost:7011/api/User/Update?id={user_bl.id}", content).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                MessageBox.Show("Dados guardados com sucesso");
+                user_bl.bio = txtBoxBio.Text;
+                user_bl.username = txtBoxUsername.Text;
+                user_bl.name = txtBoxNome.Text;
+                user_bl.status = comboBoxStatus.Text;
+            }
+            else
+            {
+                MessageBox.Show("Falha a guardar os dados");
             }
         }
     }

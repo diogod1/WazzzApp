@@ -10,7 +10,6 @@ namespace Wazzaaap.Model
         public string username { get; set; }
         [Required]
         public string password { get; set; }
-        [Required]
         public string name { get; set; }
         public string? bio { get; set; }
         public string? status { get; set; }

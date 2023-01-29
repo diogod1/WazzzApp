@@ -1,0 +1,14 @@
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.csproj.AssemblyReference.cache
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Forms.bubble.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Forms.chatBox.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Forms.frmError.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Forms.frmLogin.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Forms.frmmainWazzaapp.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Forms.frmRegister.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Forms.FrmUserProfile.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.Properties.Resources.resources
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.csproj.GenerateResource.cache
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.AssemblyInfoInputs.cache
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.AssemblyInfo.cs
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Release\net6.0-windows\Wazzaaap.csproj.CoreCompileInputs.cache

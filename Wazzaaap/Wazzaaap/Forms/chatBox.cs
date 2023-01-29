@@ -54,7 +54,7 @@ namespace Wazzaaap.Forms
                     {
                         if (item.userid != user_bl.id)
                         {
-                            addOutMessage(item.content, item.sentAt.ToString());
+                            addOutMessage(item.senderUsername, item.content, item.sentAt.ToString());
                         }
                     }
                 }
@@ -91,13 +91,13 @@ namespace Wazzaaap.Forms
             }
         }
 
-        public void addInMessage(string message, string time)
+        public void addInMessage(string senderusername, string message, string time)
         {
             if (panel2.InvokeRequired)
             {
                 panel2.Invoke((MethodInvoker)delegate
                 {
-                    bubble bbl = new bubble(message, time, msgtype.In);
+                    bubble bbl = new bubble(senderusername, message, time, msgtype.In);
                     bbl.Location = bubble1.Location;
                     bbl.Size = bubble1.Size;
                     bbl.Anchor = bubble1.Anchor;
@@ -112,7 +112,7 @@ namespace Wazzaaap.Forms
             }
             else
             {
-                bubble bbl = new bubble(message, time, msgtype.In);
+                bubble bbl = new bubble(senderusername, message, time, msgtype.In);
                 bbl.Location = bubble1.Location;
                 bbl.Size = bubble1.Size;
                 bbl.Anchor = bubble1.Anchor;
@@ -127,13 +127,13 @@ namespace Wazzaaap.Forms
 
         }
 
-        public void addOutMessage(string message, string time)
+        public void addOutMessage(string senderusername, string message, string time)
         {
             if (panel2.InvokeRequired)
             {
                 panel2.Invoke((MethodInvoker)delegate
                 {
-                    bubble bbl = new bubble(message, time, msgtype.Out);
+                    bubble bbl = new bubble(senderusername, message, time, msgtype.Out);
                     bbl.Location = bubble1.Location; bbl.Left += 270;
                     bbl.Size = bubble1.Size;
                     bbl.Anchor = bubble1.Anchor;
@@ -145,7 +145,7 @@ namespace Wazzaaap.Forms
             }
             else
             {
-                bubble bbl2 = new bubble(message, time, msgtype.Out);
+                bubble bbl2 = new bubble(senderusername, message, time, msgtype.Out);
                 bbl2.Location = bubble1.Location; bbl2.Left += 270;
                 bbl2.Size = bubble1.Size;
                 bbl2.Anchor = bubble1.Anchor;
@@ -184,11 +184,11 @@ namespace Wazzaaap.Forms
                     {
                         if (item.userid == user_bl.id && item.chatid == _chatid)
                         {
-                            addInMessage(item.content, item.sentAt.ToString());
+                            addInMessage(item.senderUsername, item.content, item.sentAt.ToString());
                         }
                         else if (item.chatid == _chatid && item.userid != user_bl.id)
                         {
-                            addOutMessage(item.content, item.sentAt.ToString());
+                            addOutMessage(item.senderUsername, item.content, item.sentAt.ToString());
                         }
                     }
 
@@ -205,12 +205,12 @@ namespace Wazzaaap.Forms
         {
             using (var client = new HttpClient())
             {
-                var sendmessage = new messages { userid = user_bl.id, chatid = _chatid, content = richTextBox1.Text, sentAt = DateTime.Now };
+                var sendmessage = new messages { userid = user_bl.id, chatid = _chatid, content = richTextBox1.Text, sentAt = DateTime.Now, senderUsername = user_bl.username };
                 client.BaseAddress = new Uri("https://localhost:7011/");
                 var response = client.PostAsJsonAsync("api/Message/Send", sendmessage).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    addInMessage(richTextBox1.Text, DateTime.Now.ToString());
+                    addInMessage(user_bl.username, richTextBox1.Text, DateTime.Now.ToString());
                 }
                 else
                 {

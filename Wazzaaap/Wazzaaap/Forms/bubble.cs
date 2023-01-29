@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Wazzaaap.Forms
+﻿namespace Wazzaaap.Forms
 {
     public partial class bubble : UserControl
     {
@@ -17,13 +7,14 @@ namespace Wazzaaap.Forms
             InitializeComponent();
         }
 
-        public bubble(string message, string time, msgtype messagetype)
+        public bubble(string senderusername, string message, string time, msgtype messagetype)
         {
             InitializeComponent();
             lblMessage.Text = message;
             lblTime.Text = time;
+            lblNomeSender.Text = senderusername;
 
-            if(messagetype.ToString()=="In")
+            if (messagetype.ToString() == "In")
             {
                 //Entrada de Mensagem
                 this.BackColor = Color.FromArgb(0, 171, 255);
@@ -45,7 +36,7 @@ namespace Wazzaaap.Forms
             SizeF size = g.MeasureString(lblMessage.Text, lblMessage.Font, lblMessage.Width);
 
             lblMessage.Height = int.Parse(Math.Round(size.Height + 2, 0).ToString());
-            lblTime.Top = lblMessage.Bottom +10;
+            lblTime.Top = lblMessage.Bottom + 10;
             this.Height = lblTime.Height + 10;
         }
 
@@ -66,6 +57,11 @@ namespace Wazzaaap.Forms
         }
 
         private void lblTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }

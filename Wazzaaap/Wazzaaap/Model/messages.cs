@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Wazzaaap.Model
 {
@@ -8,18 +7,11 @@ namespace Wazzaaap.Model
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Content { get; set; }
-        public DateTime SentAt { get; set; }
-
-        //FOREIGN KEYS
-        [ForeignKey("Chat")]
-        public int? ChatId { get; set; }
-        public virtual chats Chat { get; set; }
-        [ForeignKey("Group")]
-        public int? GroupId { get; set; }
-        public virtual groups Group { get; set; }
-        [ForeignKey("User")]
-        public int UserId { get; set; }
-        public virtual user User { get; set; }
+        public int chatid { get; set; }
+        [Required]
+        public int userid { get; set; }
+        public string content { get; set; }
+        public DateTime sentAt { get; set; }
+        public string senderUsername { get; set; }
     }
 }

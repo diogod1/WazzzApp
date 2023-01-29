@@ -24,7 +24,6 @@ C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-wind
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\MySql.Data.dll
-C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Ubiety.Dns.Core.dll
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\ZstdNet.dll
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\MySql.EntityFrameworkCore.dll
 C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
@@ -98,3 +97,13 @@ C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.pdb
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\Wazzaaap.genruntimeconfig.cache
 C:\Users\diogduarte\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\obj\Debug\net6.0-windows\ref\Wazzaaap.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\comerr64.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\gssapi64.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\k5sprt64.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\krb5_64.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\krbcc64.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\diogo\Documents\GitHub\WazzzApp\Wazzaaap\Wazzaaap\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

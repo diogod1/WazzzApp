@@ -11,8 +11,5 @@ namespace Wazzaaap.Model
         public DbSet<user> users { get; set; }
         public DbSet<messages> messages { get; set; }
         public DbSet<chats> chats { get; set; }
-        public DbSet<groups> groups { get; set; }
-        public DbSet<users_chats> users_chats { get; set; }
-        public DbSet<users_groups> users_groups { get; set; }
     }
 }

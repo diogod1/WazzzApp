@@ -36,21 +36,16 @@
             this.lblWazzaapp = new System.Windows.Forms.Label();
             this.picBoxIconWazzaap = new System.Windows.Forms.PictureBox();
             this.pnlSearchHeaderWazzaapp = new System.Windows.Forms.Panel();
+            this.lblNameChat = new System.Windows.Forms.Label();
             this.pnlSideSearchWazzaapp = new System.Windows.Forms.Panel();
-            this.pnlSearchBottomLine = new System.Windows.Forms.Panel();
-            this.txtBoxSearchWazzaapp = new System.Windows.Forms.TextBox();
-            this.picBoxSearchWazzaapp = new System.Windows.Forms.PictureBox();
             this.pnlSideUsersWazzaapp = new System.Windows.Forms.Panel();
             this.pnlMainWazzaapp = new System.Windows.Forms.Panel();
-            this.lblNameChat = new System.Windows.Forms.Label();
             this.pnlHeaderWazzaapp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMinimizeWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxExitWazzaapp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).BeginInit();
             this.pnlSearchHeaderWazzaapp.SuspendLayout();
-            this.pnlSideSearchWazzaapp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSearchWazzaapp)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeaderWazzaapp
@@ -137,47 +132,23 @@
             this.pnlSearchHeaderWazzaapp.Size = new System.Drawing.Size(1169, 43);
             this.pnlSearchHeaderWazzaapp.TabIndex = 4;
             // 
+            // lblNameChat
+            // 
+            this.lblNameChat.AutoSize = true;
+            this.lblNameChat.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNameChat.ForeColor = System.Drawing.Color.White;
+            this.lblNameChat.Location = new System.Drawing.Point(313, 9);
+            this.lblNameChat.Name = "lblNameChat";
+            this.lblNameChat.Size = new System.Drawing.Size(0, 25);
+            this.lblNameChat.TabIndex = 5;
+            // 
             // pnlSideSearchWazzaapp
             // 
-            this.pnlSideSearchWazzaapp.Controls.Add(this.pnlSearchBottomLine);
-            this.pnlSideSearchWazzaapp.Controls.Add(this.txtBoxSearchWazzaapp);
-            this.pnlSideSearchWazzaapp.Controls.Add(this.picBoxSearchWazzaapp);
             this.pnlSideSearchWazzaapp.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSideSearchWazzaapp.Location = new System.Drawing.Point(0, 0);
             this.pnlSideSearchWazzaapp.Name = "pnlSideSearchWazzaapp";
             this.pnlSideSearchWazzaapp.Size = new System.Drawing.Size(307, 43);
             this.pnlSideSearchWazzaapp.TabIndex = 5;
-            // 
-            // pnlSearchBottomLine
-            // 
-            this.pnlSearchBottomLine.BackColor = System.Drawing.Color.White;
-            this.pnlSearchBottomLine.Location = new System.Drawing.Point(12, 35);
-            this.pnlSearchBottomLine.Name = "pnlSearchBottomLine";
-            this.pnlSearchBottomLine.Size = new System.Drawing.Size(248, 5);
-            this.pnlSearchBottomLine.TabIndex = 6;
-            // 
-            // txtBoxSearchWazzaapp
-            // 
-            this.txtBoxSearchWazzaapp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(157)))), ((int)(((byte)(198)))));
-            this.txtBoxSearchWazzaapp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxSearchWazzaapp.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxSearchWazzaapp.ForeColor = System.Drawing.Color.White;
-            this.txtBoxSearchWazzaapp.Location = new System.Drawing.Point(12, 6);
-            this.txtBoxSearchWazzaapp.Name = "txtBoxSearchWazzaapp";
-            this.txtBoxSearchWazzaapp.PlaceholderText = "Search";
-            this.txtBoxSearchWazzaapp.Size = new System.Drawing.Size(247, 26);
-            this.txtBoxSearchWazzaapp.TabIndex = 1;
-            this.txtBoxSearchWazzaapp.TextChanged += new System.EventHandler(this.txtBoxSearchWazzaapp_TextChanged);
-            // 
-            // picBoxSearchWazzaapp
-            // 
-            this.picBoxSearchWazzaapp.Image = ((System.Drawing.Image)(resources.GetObject("picBoxSearchWazzaapp.Image")));
-            this.picBoxSearchWazzaapp.Location = new System.Drawing.Point(265, 6);
-            this.picBoxSearchWazzaapp.Name = "picBoxSearchWazzaapp";
-            this.picBoxSearchWazzaapp.Size = new System.Drawing.Size(35, 28);
-            this.picBoxSearchWazzaapp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxSearchWazzaapp.TabIndex = 0;
-            this.picBoxSearchWazzaapp.TabStop = false;
             // 
             // pnlSideUsersWazzaapp
             // 
@@ -195,16 +166,6 @@
             this.pnlMainWazzaapp.Size = new System.Drawing.Size(862, 636);
             this.pnlMainWazzaapp.TabIndex = 6;
             this.pnlMainWazzaapp.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMainWazzaapp_Paint);
-            // 
-            // lblNameChat
-            // 
-            this.lblNameChat.AutoSize = true;
-            this.lblNameChat.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNameChat.ForeColor = System.Drawing.Color.White;
-            this.lblNameChat.Location = new System.Drawing.Point(313, 9);
-            this.lblNameChat.Name = "lblNameChat";
-            this.lblNameChat.Size = new System.Drawing.Size(0, 25);
-            this.lblNameChat.TabIndex = 5;
             // 
             // frmmainWazzaapp
             // 
@@ -229,9 +190,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxIconWazzaap)).EndInit();
             this.pnlSearchHeaderWazzaapp.ResumeLayout(false);
             this.pnlSearchHeaderWazzaapp.PerformLayout();
-            this.pnlSideSearchWazzaapp.ResumeLayout(false);
-            this.pnlSideSearchWazzaapp.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxSearchWazzaapp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,9 +202,6 @@
         private PictureBox picBoxIconWazzaap;
         private Panel pnlSearchHeaderWazzaapp;
         private Panel pnlSideSearchWazzaapp;
-        private TextBox txtBoxSearchWazzaapp;
-        private PictureBox picBoxSearchWazzaapp;
-        private Panel pnlSearchBottomLine;
         private Panel pnlSideUsersWazzaapp;
         private Panel pnlMainWazzaapp;
         private PictureBox picBoxMinimizeWazzaapp;

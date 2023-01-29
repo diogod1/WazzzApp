@@ -30,13 +30,14 @@
         {
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
+            this.lblNomeSender = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblMessage
             // 
             this.lblMessage.Font = new System.Drawing.Font("Dubai Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMessage.ForeColor = System.Drawing.Color.White;
-            this.lblMessage.Location = new System.Drawing.Point(3, 0);
+            this.lblMessage.Location = new System.Drawing.Point(3, 19);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.Size = new System.Drawing.Size(522, 32);
             this.lblMessage.TabIndex = 0;
@@ -54,11 +55,23 @@
             this.lblTime.TabIndex = 1;
             this.lblTime.Click += new System.EventHandler(this.lblTime_Click);
             // 
+            // lblNomeSender
+            // 
+            this.lblNomeSender.AutoSize = true;
+            this.lblNomeSender.Font = new System.Drawing.Font("Dubai Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblNomeSender.ForeColor = System.Drawing.Color.White;
+            this.lblNomeSender.Location = new System.Drawing.Point(0, 0);
+            this.lblNomeSender.Name = "lblNomeSender";
+            this.lblNomeSender.Size = new System.Drawing.Size(0, 21);
+            this.lblNomeSender.TabIndex = 2;
+            this.lblNomeSender.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // bubble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
+            this.Controls.Add(this.lblNomeSender);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblMessage);
             this.Name = "bubble";
@@ -73,5 +86,6 @@
 
         private Label lblMessage;
         private Label lblTime;
+        private Label lblNomeSender;
     }
 }
