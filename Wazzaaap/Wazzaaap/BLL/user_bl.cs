@@ -35,11 +35,11 @@ namespace Wazzaaap.BLL
                 if (res == 0)
                 {
 
-                    return 0;
+                    return 0;//falha no registo
                 }
                 else
                 {
-                    return 1;
+                    return 1;//sucesso
                 }
             }
             else

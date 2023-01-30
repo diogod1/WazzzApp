@@ -86,10 +86,21 @@ namespace Wazzaaap.Forms
                 user_bl.username = textBoxUserReg.Text;
                 user_bl.name = textBoxNameReg.Text;
                 user_bl.password = textBoxPassReg.Text;
-                if(user_bl.register() == 2)
+                var register = user_bl.register();
+                if(register == 2)
                 {
                     lblPassConditionReg.ForeColor = System.Drawing.Color.Red;
-                }                
+                }
+                else if (register == 1)
+                {
+                    this.Close();
+                    Form frmsucess = new FrmSuccess();
+                    frmsucess.Show();
+                }
+                else if(register == 0)
+                {
+                    MessageBox.Show("Erro no registo");
+                }            
             }
         }
 

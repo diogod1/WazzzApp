@@ -159,9 +159,16 @@ namespace Wazzaaap.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
-            SendMessage(chatid);
-            richTextBox1.Clear();
+            if(richTextBox1.Text.Length == 0)
+            {
+                MessageBox.Show("Insira uma mensagem");
+            }
+            else
+            {
+                panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
+                SendMessage(chatid);
+                richTextBox1.Clear();
+            }
         }
 
         public async Task GetHist(int _chatid)
@@ -228,8 +235,13 @@ namespace Wazzaaap.Forms
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                if (richTextBox1.Text != null)
+                if (richTextBox1.Text.Length == 0)
                 {
+                    MessageBox.Show("Insira uma mensagem");
+                }
+                else
+                {
+                    panel2.VerticalScroll.Value = panel2.VerticalScroll.Maximum;
                     SendMessage(chatid);
                     richTextBox1.Clear();
                 }
